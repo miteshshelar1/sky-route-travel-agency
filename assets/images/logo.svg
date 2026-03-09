@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60">
+
+<style>
+.text{font:700 26px 'Poppins', sans-serif; fill:#ffffff;}
+.plane{fill:#7ED957;}
+</style>
+
+<text x="10" y="38" class="text">SkyRoute</text>
+
+<path class="plane" d="M140 35 L200 25 L165 35 L175 55 L160 55 L155 38 L140 35 Z"></path>
+
+<path d="M10 45 Q70 65 130 45" stroke="#7ED957" stroke-width="4" fill="none"></path>
+
+</svg>
