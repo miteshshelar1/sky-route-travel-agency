@@ -16,19 +16,19 @@
 
 // });
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
 
-    const loader = document.querySelector(".loader-bg");
+  const loader = document.querySelector(".loader-bg");
 
-    setTimeout(()=>{
+  setTimeout(() => {
 
-        loader.style.opacity="0";
+    loader.style.opacity = "0";
 
-        setTimeout(()=>{
-            loader.style.display="none";
-        },700);
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 700);
 
-    },900);
+  }, 900);
 
 });
 
@@ -388,55 +388,52 @@ document.addEventListener("DOMContentLoaded", initPopularDestinationsSlider);
 
 // Testimonial slider
 
-const profileSwiper = new Swiper(".testimonial-profiles",{
+const profileSwiper = new Swiper(".testimonial-profiles", {
 
-slidesPerView:7,
-centeredSlides:true,
-spaceBetween:60,
-loop:true,
-speed:800,
-slideToClickedSlide:true,
+  slidesPerView: 7,
+  centeredSlides: true,
+  spaceBetween: 60,
+  loop: true,
+  speed: 800,
+  slideToClickedSlide: true,
 
-autoplay:{
-delay:3000,
-disableOnInteraction:false
-},
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
 
-breakpoints:{
+  breakpoints: {
 
-0:{ slidesPerView:3, spaceBetween:15 },
-576:{ slidesPerView:3, spaceBetween:20 },
-768:{ slidesPerView:4, spaceBetween:25 },
-1024:{ slidesPerView:7, spaceBetween:30 }
+    0: { slidesPerView: 3, spaceBetween: 15 },
+    576: { slidesPerView: 3, spaceBetween: 20 },
+    768: { slidesPerView: 4, spaceBetween: 25 },
+    1024: { slidesPerView: 7, spaceBetween: 30 }
 
-}
+  }
 
 });
 
 
-const textSwiper = new Swiper(".testimonial-text",{
+const textSwiper = new Swiper(".testimonial-text", {
 
-slidesPerView:1,
-loop:true,
-effect:"fade",
-fadeEffect:{crossFade:true},
-speed:800,
-allowTouchMove:false
+  slidesPerView: 1,
+  loop: true,
+  effect: "fade",
+  fadeEffect: { crossFade: true },
+  speed: 800,
+  allowTouchMove: false
 
 });
 
 
 /* IMPORTANT */
 profileSwiper.on("slideChange", function () {
-textSwiper.slideToLoop(profileSwiper.realIndex);
+  textSwiper.slideToLoop(profileSwiper.realIndex);
 });
 
 
 
 // Booking Section Data 
-/* ==============================
-   TRAVELER COUNTER
-================================ */
 
 /* ==============================
    TRAVELER COUNTER
@@ -448,124 +445,223 @@ const travelerInput = document.getElementById("travelerCount");
 const travelerContainer = document.getElementById("travelerCards");
 const travelerWrapper = document.getElementById("travelerDetailsWrapper");
 
+
 document.getElementById("addTraveler").onclick = function () {
 
-travelerCount++;
+  travelerCount++;
 
-travelerInput.value = travelerCount;
+  travelerInput.value = travelerCount;
 
-generateTravelers(travelerCount);
+  generateTravelers();
 
 };
+
 
 document.getElementById("minusTraveler").onclick = function () {
 
-if (travelerCount > 1) {
+  if (travelerCount > 1) {
 
-travelerCount--;
+    travelerCount--;
 
-travelerInput.value = travelerCount;
+    travelerInput.value = travelerCount;
 
-generateTravelers(travelerCount);
+    generateTravelers();
 
-}
+  }
 
 };
 
+// Add traveller section
+function triggerAddTraveler() {
 
+  document.getElementById("addTraveler").click();
+
+}
 
 /* ==============================
    GENERATE TRAVELER FIELDS
 ================================ */
 
-function generateTravelers(total){
+function generateTravelers() {
 
-let existing = document.querySelectorAll(".traveler-card").length;
+  let existing = document.querySelectorAll(".traveler-card").length;
 
-travelerWrapper.style.display = "block";
+  travelerWrapper.style.display = "block";
 
-/* ADD NEW TRAVELERS */
 
-if(total > existing){
+  /* ADD NEW */
 
-for(let i = existing + 1; i <= total; i++){
+  if (travelerCount > existing) {
 
-let card = document.createElement("div");
+    for (let i = existing + 1; i <= travelerCount; i++) {
 
-card.className = "traveler-card";
+      let card = document.createElement("div");
 
-card.innerHTML = `
+      card.className = "traveler-card";
+
+      card.innerHTML = `
 
 <div class="traveler-head">
 
+<div class="traveler-title">
+<span class="traveler-icon">👤</span>
 <strong>Traveler ${i}</strong>
+</div>
 
 <button type="button"
 class="removeTraveler"
-onclick="removeTraveler(this)">✕</button>
+onclick="removeTraveler(this)">✖</button>
 
 </div>
 
 <div class="traveler-grid">
 
+<div class="field">
+<label>Full Name</label>
 <input type="text"
 class="travelerName"
-placeholder="Name">
+placeholder="Enter full name">
+</div>
 
-<input type="number"
-class="travelerAge"
-placeholder="Age">
+<div class="field">
+<label>Age</label>
+<input type="date"
+class="travelerDOB"
+onchange="calculateAge(this)">
+</div>
 
+<div class="field">
+<label>Gender</label>
 <select class="travelerType">
-
-<option value="">Type</option>
-<option value="men">Man</option>
-<option value="women">Woman</option>
+<option value="">Select</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
 <option value="child">Child</option>
-<option value="other">Other</option>
-
 </select>
+</div>
+
+<div class="field">
+<label>Passport</label>
+<input type="text" class="travelerPassport" placeholder="Passport Number">
+</div>
+
+<div class="field">
+<label>Nationality</label>
+<input type="text" class="travelerNationality" placeholder="Nationality">
+</div>
+
+<div class="field">
+<label>Contact No.</label>
+<input type="text" class="travelerPhone" placeholder="Contact Number">
+</div>
+
+<div class="field">
+<label>Email</label>
+<input type="email" class="travelerEmail" placeholder="Email">
+</div>
 
 </div>
 
 `;
 
-travelerContainer.appendChild(card);
+      travelerContainer.appendChild(card);
+
+    }
+
+  }
+
+
+  /* REMOVE EXTRA */
+
+  if (travelerCount < existing) {
+
+    for (let i = existing; i > travelerCount; i--) {
+
+      travelerContainer.lastElementChild.remove();
+
+    }
+
+  }
+
+  updateTravelerNumbers();
 
 }
 
+/* ==============================
+   CALCULATE AGE
+================================ */
+
+function calculateAge(input) {
+
+  let dob = new Date(input.value);
+  let today = new Date();
+
+  let age = today.getFullYear() - dob.getFullYear();
+
+  let m = today.getMonth() - dob.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+    age--;
+  }
+
+  input.setAttribute("data-age", age);
+
 }
-
-
-/* REMOVE EXTRA */
-
-if(total < existing){
-
-for(let i = existing; i > total; i--){
-
-travelerContainer.lastElementChild.remove();
-
-}
-
-}
-
-}
-
-
 
 /* ==============================
    REMOVE TRAVELER
 ================================ */
 
-function removeTraveler(btn){
+// function removeTraveler(btn){
 
-if(travelerCount === 1) return;
+// if(travelerCount === 1) return;
 
-btn.closest(".traveler-card").remove();
+// btn.closest(".traveler-card").remove();
 
-travelerCount--;
+// travelerCount--;
 
-travelerInput.value = travelerCount;
+// travelerInput.value = travelerCount;
+
+// updateTravelerNumbers();
+
+// }
+function removeTraveler(btn) {
+
+  btn.closest(".traveler-card").remove();
+
+  travelerCount--;
+
+  if (travelerCount <= 0) {
+
+    travelerCount = 1;
+    travelerInput.value = 1;
+    travelerContainer.innerHTML = "";
+    travelerWrapper.style.display = "none";
+    return;
+
+  }
+
+  travelerInput.value = travelerCount;
+
+  updateTravelerNumbers();
+
+}
+
+
+/* ==============================
+   UPDATE TRAVELER NUMBER
+================================ */
+
+function updateTravelerNumbers() {
+
+  let cards = document.querySelectorAll(".traveler-card");
+
+  cards.forEach((card, index) => {
+
+    card.querySelector("strong").innerText =
+      "Traveler " + (index + 1);
+
+  });
 
 }
 
@@ -575,89 +671,89 @@ travelerInput.value = travelerCount;
    VALIDATE BOOKING FORM
 ================================ */
 
-function validateBooking(){
+function validateBooking() {
 
-let valid = true;
+  let valid = true;
 
-const fields = [
-{ id:"departure", error:"Departure city required"},
-{ id:"destination", error:"Destination required"},
-{ id:"travelDate", error:"Travel date required"},
-{ id:"returnDate", error:"Return date required"},
-{ id:"package", error:"Please select package"}
-];
+  const fields = [
+    { id: "departure", error: "Departure city required" },
+    { id: "destination", error: "Destination required" },
+    { id: "travelDate", error: "Travel date required" },
+    { id: "returnDate", error: "Return date required" },
+    { id: "package", error: "Please select package" }
+  ];
 
-fields.forEach(f => {
+  fields.forEach(f => {
 
-let el = document.getElementById(f.id);
+    let el = document.getElementById(f.id);
 
-let error = el.parentElement.querySelector(".field-error");
+    let error = el.parentElement.querySelector(".field-error");
 
-if(!error){
+    if (!error) {
 
-error = document.createElement("div");
+      error = document.createElement("div");
 
-error.className="field-error";
+      error.className = "field-error";
 
-el.parentElement.appendChild(error);
+      el.parentElement.appendChild(error);
 
-}
+    }
 
-error.innerText="";
+    error.innerText = "";
 
-el.style.border="1px solid #ddd";
+    el.style.border = "1px solid #ddd";
 
-if(el.value === ""){
+    if (el.value === "") {
 
-error.innerText=f.error;
+      error.innerText = f.error;
 
-el.style.border="2px solid red";
+      el.style.border = "2px solid red";
 
-valid=false;
+      valid = false;
 
-}
+    }
 
-});
+  });
 
-return valid;
+  return valid;
 
 }
 
 
 
 /* ==============================
-   VALIDATE TRAVELER DETAILS
+   VALIDATE TRAVELERS
 ================================ */
 
-function validateTravelers(){
+function validateTravelers() {
 
-let names = document.querySelectorAll(".travelerName");
-let ages = document.querySelectorAll(".travelerAge");
-let types = document.querySelectorAll(".travelerType");
+  let names = document.querySelectorAll(".travelerName");
+  let ages = document.querySelectorAll(".travelerDOB");
+  let types = document.querySelectorAll(".travelerType");
 
-for(let i=0;i<names.length;i++){
+  for (let i = 0; i < names.length; i++) {
 
-if(names[i].value.trim() === ""){
-alert("Please enter traveler name");
-names[i].focus();
-return false;
-}
+    if (names[i].value.trim() === "") {
+      alert("Please enter traveler name");
+      names[i].focus();
+      return false;
+    }
 
-if(ages[i].value.trim() === ""){
-alert("Please enter traveler age");
-ages[i].focus();
-return false;
-}
+    if (ages[i].value.trim() === "") {
+      alert("Please enter traveler age");
+      ages[i].focus();
+      return false;
+    }
 
-if(types[i].value === ""){
-alert("Please select traveler type");
-types[i].focus();
-return false;
-}
+    if (types[i].value === "") {
+      alert("Please select traveler gender");
+      types[i].focus();
+      return false;
+    }
 
-}
+  }
 
-return true;
+  return true;
 
 }
 
@@ -667,31 +763,19 @@ return true;
    SEARCH TRIP
 ================================ */
 
-document.getElementById("searchTrip").onclick = function(e){
+document.getElementById("searchTrip").onclick = function (e) {
 
-e.preventDefault();
+  e.preventDefault();
 
-if(!validateBooking()) return;
+  if (!validateBooking()) return;
 
-generateTravelers(travelerCount);
+  generateTravelers();
 
-if(!validateTravelers()) return;
+  if (!validateTravelers()) return;
 
-openPopup();
+  openPopup();
 
 };
-
-
-
-/* ==============================
-   PACKAGE SELECT -> CLOSE TRAVELER
-================================ */
-
-document.getElementById("package").addEventListener("change",function(){
-
-travelerWrapper.style.display="none";
-
-});
 
 
 
@@ -699,106 +783,114 @@ travelerWrapper.style.display="none";
    OPEN POPUP
 ================================ */
 
-function openPopup(){
+function openPopup() {
 
-const departure = document.getElementById("departure").value;
-const destination = document.getElementById("destination").value;
-const travel = document.getElementById("travelDate").value;
-const ret = document.getElementById("returnDate").value;
+  const departure =
+    document.getElementById("departure").value;
 
-const start = new Date(travel);
-const end = new Date(ret);
+  const destination =
+    document.getElementById("destination").value;
 
-const days = (end-start)/(1000*60*60*24);
+  const travel =
+    document.getElementById("travelDate").value;
 
-if(days <= 0){
+  const ret =
+    document.getElementById("returnDate").value;
 
-alert("Return date must be after travel date");
+  const start = new Date(travel);
+  const end = new Date(ret);
 
-return;
+  const days = (end - start) / (1000 * 60 * 60 * 24);
 
-}
+  if (days <= 0) {
 
-const packagePrice = parseInt(document.getElementById("package").value);
+    alert("Return date must be after travel date");
 
-const totalAmount = days * travelerCount * packagePrice;
+    return;
 
+  }
 
-/* COUNT MEN WOMEN CHILDREN */
-let types = document.querySelectorAll(".travelerType");
+  const packageSelect = document.getElementById("package");
 
-let men = 0;
-let women = 0;
-let children = 0;
+  const packagePrice =
+    parseInt(packageSelect.options[packageSelect.selectedIndex].dataset.price);
 
-types.forEach(type => {
+  const totalAmount = days * travelerCount * packagePrice;
 
-if(type.value === "men"){
-men++;
-}
-
-if(type.value === "women"){
-women++;
-}
-
-if(type.value === "child"){
-children++;
-}
-
-});
+  document.getElementById("p_amount").innerText = totalAmount;
 
 
-document.getElementById("p_departure").innerText = departure;
-document.getElementById("p_destination").innerText = destination;
-document.getElementById("p_travel").innerText = travel;
-document.getElementById("p_return").innerText = ret;
+  /* COUNT GENDER */
 
-document.getElementById("p_men").innerText = men;
-document.getElementById("p_women").innerText = women;
-document.getElementById("p_children").innerText = children;
+  let types = document.querySelectorAll(".travelerType");
 
-document.getElementById("p_travelers").innerText = travelerCount;
-document.getElementById("p_days").innerText = days;
-document.getElementById("p_amount").innerText = totalAmount;
+  let men = 0;
+  let women = 0;
+  let children = 0;
 
-showTravelerPopup();
+  types.forEach(type => {
 
-document.getElementById("bookingPopup").style.display="flex";
+    if (type.value === "male") men++;
+
+    if (type.value === "female") women++;
+
+    if (type.value === "child") children++;
+
+  });
+
+
+  document.getElementById("p_departure").innerText = departure;
+  document.getElementById("p_destination").innerText = destination;
+  document.getElementById("p_travel").innerText = travel;
+  document.getElementById("p_return").innerText = ret;
+
+  document.getElementById("p_men").innerText = men;
+  document.getElementById("p_women").innerText = women;
+  document.getElementById("p_children").innerText = children;
+
+  document.getElementById("p_travelers").innerText = travelerCount;
+  document.getElementById("p_days").innerText = days;
+  document.getElementById("p_amount").innerText = totalAmount;
+
+  showTravelerPopup();
+
+  document.getElementById("bookingPopup").style.display = "flex";
 
 }
 
 
 
 /* ==============================
-   SHOW TRAVELER DETAILS
+   SHOW TRAVELERS IN POPUP
 ================================ */
 
+function showTravelerPopup() {
 
-function showTravelerPopup(){
+  let names = document.querySelectorAll(".travelerName");
+  let dobs = document.querySelectorAll(".travelerDOB");
+  let types = document.querySelectorAll(".travelerType");
 
-let names = document.querySelectorAll(".travelerName");
-let ages = document.querySelectorAll(".travelerAge");
-let types = document.querySelectorAll(".travelerType");
+  let list = "";
 
-let list="";
+  for (let i = 0; i < names.length; i++) {
 
-for(let i=0;i<names.length;i++){
+    let age = dobs[i].getAttribute("data-age") || "N/A";
 
-list += `
+    list += `
+
 <div class="popup-traveler">
 
 <span>${names[i].value}</span>
-
-<span>Age ${ages[i].value}</span>
-
+<span>Age ${age}</span>
 <span>${types[i].value}</span>
 
 </div>
+
 `;
 
-}
+  }
 
-document.getElementById("popupTravelerList").innerHTML = list;
+  document.getElementById("popupTravelerList").innerHTML = list;
 
 }
 
@@ -808,9 +900,9 @@ document.getElementById("popupTravelerList").innerHTML = list;
    CLOSE POPUP
 ================================ */
 
-function closePopup(){
+function closePopup() {
 
-document.getElementById("bookingPopup").style.display="none";
+  document.getElementById("bookingPopup").style.display = "none";
 
 }
 
@@ -820,13 +912,13 @@ document.getElementById("bookingPopup").style.display="none";
    CONFIRM BOOKING
 ================================ */
 
-function confirmTrip(){
+function confirmTrip() {
 
-document.getElementById("bookingPopup").style.display="none";
+  document.getElementById("bookingPopup").style.display = "none";
 
-alert("🎉 Thank you! Your trip request submitted.");
+  alert("🎉 Thank you! Your trip request submitted.");
 
-downloadReceipt();
+  downloadReceipt();
 
 }
 
@@ -836,127 +928,229 @@ downloadReceipt();
    DOWNLOAD RECEIPT
 ================================ */
 
-function downloadReceipt(){
+function downloadReceipt() {
 
-const { jsPDF } = window.jspdf;
-const doc = new jsPDF();
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
 
-/* GET DATA */
+  /* CAPITALIZE FUNCTION */
 
-let departure = document.getElementById("departure").value;
-let destination = document.getElementById("destination").value;
-let travel = document.getElementById("travelDate").value;
-let ret = document.getElementById("returnDate").value;
+  function capitalizeWords(str) {
+    return str.replace(/\b\w/g, c => c.toUpperCase());
+  }
 
-let packageName =
-document.getElementById("package").selectedOptions[0].text;
+  /* LOGO LOAD */
 
-let amount = parseInt(document.getElementById("p_amount").innerText);
+  let logo = new Image();
+  logo.src = "./assets/images/logo-white.png";
 
-let men = document.getElementById("p_men").innerText;
-let women = document.getElementById("p_women").innerText;
-let children = document.getElementById("p_children").innerText;
+  logo.onload = function () {
 
+    /* HEADER */
 
-/* OUTER BORDER */
+    doc.setFillColor(20, 27, 52);
+    doc.rect(0, 0, 210, 28, "F");
 
-doc.rect(10,10,190,277);
+    doc.setDrawColor(204, 243, 47);
+    doc.setLineWidth(1.2);
+    doc.line(0, 28, 210, 28);
 
+    doc.addImage(logo, "PNG", 15, 6, 28, 14);
 
-/* HEADER */
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(20);
+    doc.setTextColor(255, 255, 255);
 
-doc.setFontSize(18);
-doc.text("Travel Booking Receipt",105,20,{align:"center"});
-
-
-/* BOOKING DETAILS BOX */
-
-doc.setFontSize(12);
-
-doc.rect(15,30,180,35);
-
-doc.text("Departure : " + departure,20,40);
-doc.text("Destination : " + destination,20,50);
-
-doc.text("Travel Date : " + travel,110,40);
-doc.text("Return Date : " + ret,110,50);
+    doc.text("Sky Route Travel Agency", 105, 17, { align: "center" });
 
 
-/* TRAVELER SUMMARY */
+    /* FORM DATA */
 
-doc.rect(15,70,180,35);
+    let departure = document.getElementById("departure").value;
+    let destination = document.getElementById("destination").value;
+    let travel = document.getElementById("travelDate").value;
+    let ret = document.getElementById("returnDate").value;
 
-doc.text("Men : " + men,20,80);
-doc.text("Women : " + women,20,90);
-doc.text("Children : " + children,20,100);
+    let packageType = document.getElementById("package").value;
+    let packageName = document.getElementById("package").selectedOptions[0].text;
 
-doc.text("Total Travelers : " + travelerCount,110,80);
-doc.text("Package : " + packageName,110,90);
-
-
-/* TOTAL AMOUNT BOX */
-
-doc.setFontSize(14);
-
-doc.rect(15,110,180,15);
-
-doc.text("Total Amount : Rs " + amount,105,120,{align:"center"});
+    let amount = document.getElementById("p_amount").innerText;
 
 
-/* TRAVELER DETAILS */
+    /* TRAVELER DATA */
 
-doc.setFontSize(12);
-
-doc.text("Traveler Details",20,140);
-
-
-/* TABLE HEADER */
-
-doc.rect(15,145,180,10);
-
-doc.text("Name",25,152);
-doc.text("Age",160,152);
+    let names = document.querySelectorAll(".travelerName");
+    let dobs = document.querySelectorAll(".travelerDOB");
+    let genders = document.querySelectorAll(".travelerType");
+    let passports = document.querySelectorAll(".travelerPassport");
+    let phones = document.querySelectorAll(".travelerPhone");
 
 
-/* TABLE ROWS */
+    /* TITLE */
 
-let names = document.querySelectorAll(".travelerName");
-let ages = document.querySelectorAll(".travelerAge");
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(12);
 
-let y = 160;
-
-for(let i=0;i<names.length;i++){
-
-doc.rect(15,y-5,180,10);
-
-doc.text(names[i].value,25,y);
-doc.text(ages[i].value.toString(),160,y);
-
-y+=10;
-
-}
+    doc.text("Travel Booking Receipt", 105, 38, { align: "center" });
+    doc.text("Booking ID : " + bookingCode, 20, 46);
 
 
-/* FOOTER */
+    /* TRIP DETAILS */
 
-doc.setFontSize(10);
+    doc.setDrawColor(20, 27, 52);
+    doc.setLineWidth(0.5);
 
-doc.text(
-"Thank you for booking with Sky Route Travel Agency",
-105,
-280,
-{align:"center"}
-);
+    doc.rect(15, 50, 180, 35);
+
+    doc.setFontSize(11);
+
+    doc.text("Departure : " + departure, 20, 60);
+    doc.text("Destination : " + destination, 20, 70);
+
+    doc.text("Travel Date : " + travel, 110, 60);
+    doc.text("Return Date : " + ret, 110, 70);
 
 
-/* SAVE FILE */
+    /* PACKAGE FEATURES */
 
-doc.save("travel-booking-receipt.pdf");
+    let features = packageDetails[packageType].features;
+
+    let featureHeight = features.length * 6;
+    let boxHeight = 30 + featureHeight;
 
 
-/* RESET FORM */
+    /* SUMMARY BOX */
 
-resetBookingForm();
+    doc.rect(15, 90, 180, boxHeight);
+
+    doc.setFont("helvetica", "bold");
+    doc.text("Total Travelers :", 20, 100);
+
+    doc.setFont("helvetica", "normal");
+    doc.text(travelerCount.toString(), 60, 100);
+
+    doc.setFont("helvetica", "bold");
+    doc.text("Days :", 110, 100);
+
+    doc.setFont("helvetica", "normal");
+    doc.text(document.getElementById("p_days").innerText, 125, 100);
+
+    doc.setFont("helvetica", "bold");
+    doc.text("Package :", 20, 110);
+
+    doc.setFont("helvetica", "normal");
+    doc.text(packageName, 45, 110);
+
+
+    /* PACKAGE INCLUDES */
+
+    doc.setFont("helvetica", "bold");
+    doc.text("Package Includes:", 110, 110);
+
+    doc.setFont("helvetica", "normal");
+
+    let fy = 115;
+
+    features.forEach(f => {
+      doc.text("- " + f, 110, fy);
+      fy += 6;
+    });
+
+
+    /* TOTAL AMOUNT */
+
+    let nextY = 90 + boxHeight + 10;
+
+    doc.setFillColor(204, 243, 47);
+    doc.rect(15, nextY, 180, 12, "F");
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(13);
+
+    doc.text("Total Amount : Rs " + amount, 105, nextY + 8, { align: "center" });
+
+    doc.setFont("helvetica", "normal");
+
+
+    /* TRAVELER SECTION */
+
+    let tableStartY = nextY + 20;
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(12);
+
+    doc.text("Traveler Details", 20, tableStartY);
+
+
+    /* TABLE HEADER */
+
+    let y = tableStartY + 8;
+
+    doc.setDrawColor(20, 27, 52);
+    doc.rect(15, y, 180, 10);
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+
+    doc.text("Name", 18, y + 7);
+    doc.text("Age", 70, y + 7);
+    doc.text("Gender", 90, y + 7);
+    doc.text("Passport", 115, y + 7);
+    doc.text("Phone", 150, y + 7);
+
+    y += 15;
+
+    doc.setFont("helvetica", "normal");
+
+
+    /* TRAVELER DATA WITH PAGE BREAK */
+
+    for (let i = 0; i < names.length; i++) {
+
+      if (y > 270) {
+        doc.addPage();
+        y = 20;
+      }
+
+      let age = dobs[i].getAttribute("data-age") || "N/A";
+
+      doc.rect(15, y - 5, 180, 10);
+
+      doc.text(capitalizeWords(names[i].value), 18, y);
+      doc.text(age.toString(), 70, y);
+      doc.text(capitalizeWords(genders[i].value), 90, y);
+      doc.text(passports[i].value || "-", 115, y);
+      doc.text(phones[i].value || "-", 150, y);
+
+      y += 10;
+
+    }
+
+
+    /* FOOTER */
+
+    doc.setFontSize(10);
+
+    doc.text(
+      "Thank you for booking with Sky Route Travel Agency",
+      105,
+      285,
+      { align: "center" }
+    );
+
+
+    /* SAVE */
+
+    doc.save("travel-booking-receipt.pdf");
+
+
+    /* RESET FORM */
+
+    setTimeout(() => {
+      resetBookingForm();
+    }, 1000);
+
+  }
 
 }
 
@@ -966,20 +1160,208 @@ resetBookingForm();
    RESET FORM
 ================================ */
 
-function resetBookingForm(){
+function resetBookingForm() {
 
-document.getElementById("departure").value="";
-document.getElementById("destination").value="";
-document.getElementById("travelDate").value="";
-document.getElementById("returnDate").value="";
-document.getElementById("package").value="";
+  document.getElementById("departure").value = "";
+  document.getElementById("destination").value = "";
+  document.getElementById("travelDate").value = "";
+  document.getElementById("returnDate").value = "";
+  document.getElementById("package").value = "";
 
-travelerCount = 1;
+  travelerCount = 1;
 
-travelerInput.value = 1;
+  travelerInput.value = 1;
 
-travelerContainer.innerHTML="";
+  travelerContainer.innerHTML = "";
 
-travelerWrapper.style.display="none";
+  travelerWrapper.style.display = "none";
 
 }
+/* ==============================
+   BOOKING PACKAGE DETAILS
+================================ */
+
+const packageDetails = {
+
+  budget: {
+    title: "Budget Package",
+    price: "₹2000 / day",
+    features: [
+      "2 Star Hotel",
+      "Breakfast Included",
+      "Shared Transport",
+      "Basic Sightseeing"
+    ]
+  },
+
+  standard: {
+    title: "Standard Package",
+    price: "₹3500 / day",
+    features: [
+      "3 Star Hotel",
+      "Breakfast + Dinner",
+      "Private Transport",
+      "City Tour Guide"
+    ]
+  },
+
+  luxury: {
+    title: "Luxury Package",
+    price: "₹6000 / day",
+    features: [
+      "4 Star Resort",
+      "All Meals Included",
+      "Private Cab",
+      "Airport Pickup"
+    ]
+  },
+
+  premium: {
+    title: "Premium Package",
+    price: "₹9000 / day",
+    features: [
+      "5 Star Resort",
+      "All Meals Included",
+      "Luxury Chauffeur Car",
+      "Private Tour Guide",
+      "Spa Access"
+    ]
+  }
+
+};
+
+
+function showPackageInfo() {
+
+  const selected = document.getElementById("package").value;
+
+  if (selected === "") return;
+
+  const data = packageDetails[selected];
+
+  document.getElementById("packageTitle").innerText = data.title;
+
+  document.getElementById("packagePrice").innerText = data.price;
+
+  let featuresHTML = "";
+
+  data.features.forEach(f => {
+    featuresHTML += `<li>✓ ${f}</li>`;
+  });
+
+  document.getElementById("packageFeatures").innerHTML = featuresHTML;
+
+  document.getElementById("packagePopup").style.display = "flex";
+
+}
+
+
+function closePackagePopup() {
+
+  document.getElementById("packagePopup").style.display = "none";
+
+}
+
+
+///// Booking Save In DB///////
+
+let bookingCode = ""; // booking id store karne ke liye
+
+function saveBooking() {
+
+  let travelers = [];
+
+  document.querySelectorAll(".traveler-card").forEach(card => {
+
+    let name = card.querySelector(".travelerName").value;
+    let dob = card.querySelector(".travelerDOB").value;
+    let gender = card.querySelector(".travelerType").value;
+
+    let passport = card.querySelector(".travelerPassport").value;
+    let nationality = card.querySelector(".travelerNationality").value;
+    let phone = card.querySelector(".travelerPhone").value;
+    let email = card.querySelector(".travelerEmail").value;
+
+    travelers.push({
+      name: name,
+      dob: dob,
+      gender: gender,
+      passport: passport,
+      nationality: nationality,
+      phone: phone,
+      email: email
+    });
+
+  });
+
+  let data = {
+
+    departure: document.getElementById("departure").value,
+    destination: document.getElementById("destination").value,
+    travelDate: document.getElementById("travelDate").value,
+    returnDate: document.getElementById("returnDate").value,
+    package: document.getElementById("package").value,
+    totalTravelers: travelerCount,
+    totalAmount: document.getElementById("p_amount").innerText,
+    travelers: travelers
+
+  };
+
+  fetch("backend/save_booking.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+    .then(res => res.json())
+    .then(res => {
+
+      console.log("Booking saved", res);
+
+      if (res.booking_code) {
+
+        bookingCode = res.booking_code;
+
+        /* DOWNLOAD RECEIPT */
+
+        downloadReceipt();
+
+        alert("Booking Confirmed! Your Booking ID: " + bookingCode);
+
+        /* PAGE RESET */
+
+        setTimeout(() => {
+
+          resetBookingForm();
+
+        }, 1500);
+
+      }
+
+    })
+    .catch(err => {
+      console.error("Booking error:", err);
+    });
+
+}
+
+//// Confirm Button Info /////////////
+
+function confirmTrip() {
+
+  saveBooking();
+
+  document.getElementById("bookingPopup").style.display = "none";
+
+}
+
+
+// SMOOTH SCROLLING
+
+window.onload = function () {
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+};

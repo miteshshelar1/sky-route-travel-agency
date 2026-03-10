@@ -363,7 +363,7 @@ S1000 200 1150 100" stroke="#0E3D4D" stroke-width="2" fill="none" stroke-dasharr
 
                     <div class="container">
 
-                        <form id="bookingForm">
+                        <form id="bookingForm" data-aos="fade-up">
 
                             <div class="booking-box">
 
@@ -471,17 +471,31 @@ S1000 200 1150 100" stroke="#0E3D4D" stroke-width="2" fill="none" stroke-dasharr
                                         <img src="./assets/images/budget.svg" width="20" alt=""> Budget / Package
                                     </label>
 
-                                    <div class="input-icon">
+                                    <div class="input-icon package-wrapper">
 
-                                        <select id="package" name="package" required>
+                                        <select id="package" name="package" required onchange="showPackageInfo()">
 
                                             <option value="">Select Package</option>
-                                            <option value="2000">Budget Package</option>
-                                            <option value="3500">Standard Package</option>
-                                            <option value="6000">Luxury Package</option>
-                                            <option value="9000">Premium Package</option>
+
+                                            <option value="budget" data-price="2000">
+                                                Budget Package
+                                            </option>
+
+                                            <option value="standard" data-price="3500">
+                                                Standard Package
+                                            </option>
+
+                                            <option value="luxury" data-price="6000">
+                                                Luxury Package
+                                            </option>
+
+                                            <option value="premium" data-price="9000">
+                                                Premium Package
+                                            </option>
 
                                         </select>
+
+                                        <span class="package-info-icon" onclick="showPackageInfo()">ℹ️</span>
 
                                     </div>
 
@@ -510,9 +524,18 @@ S1000 200 1150 100" stroke="#0E3D4D" stroke-width="2" fill="none" stroke-dasharr
                         <!-- Traveler Details Section -->
                         <div class="traveler-details-wrapper" id="travelerDetailsWrapper" style="display:none">
 
-                            <h4>Traveler Details</h4>
+                            <div class="traveler-header">
+
+                                <h4>Traveler Details</h4>
+
+
+
+                            </div>
 
                             <div id="travelerCards"></div>
+                            <button type="button" class="add-traveler-btn" onclick="triggerAddTraveler()">
+                                + Add Traveler
+                            </button>
 
                         </div>
 
@@ -547,7 +570,7 @@ S1000 200 1150 100" stroke="#0E3D4D" stroke-width="2" fill="none" stroke-dasharr
             <section id="counter-info">
 
                 <div class="container">
-                    <div class="counter-info-content">
+                    <div class="counter-info-content" data-aos="fade-up">
                         <div class="row">
 
                             <div class="col-lg-4">
@@ -1122,7 +1145,24 @@ S1000 200 1150 100" stroke="#0E3D4D" stroke-width="2" fill="none" stroke-dasharr
 
         </div>
         <!-- Booking Data Popup  End -->
+        <!-- packagePopup End -->
+        <div id="packagePopup" class="package-popup">
 
+            <div class="package-popup-box">
+
+                <span class="package-close" onclick="closePackagePopup()">✖</span>
+
+                <h3 id="packageTitle"></h3>
+
+                <p class="package-price" id="packagePrice"></p>
+
+                <ul id="packageFeatures"></ul>
+
+            </div>
+
+        </div>
+        <!-- packagePopup  End -->
+        <!-- booking thank youPopup  Start -->
         <div id="thankPopup" class="popup">
 
             <div class="popup-box">
@@ -1136,6 +1176,10 @@ S1000 200 1150 100" stroke="#0E3D4D" stroke-width="2" fill="none" stroke-dasharr
             </div>
 
         </div>
+        <!-- booking thank youPopup  End -->
+
+
+
 
     </main>
     <!-- Footer Start -->
@@ -1250,6 +1294,13 @@ We help you plan unforgettable journeys.
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/init.js?v9" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>
