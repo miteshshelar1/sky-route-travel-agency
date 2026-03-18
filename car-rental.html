@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- SEO Essentials -->
+    <title>Sky Route Travel Agency</title>
+    <meta name="description" content="Sky Route Travel Agency" />
+    <meta name="keywords" content="Sky Route Travel Agency" />
+    <meta name="author" content="Sky Route Travel Agency" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Sky Route Travel Agency" />
+    <meta property="og:description" content="Sky Route Travel Agency" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Canonical -->
+    <link rel="canonical" href="" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#0080A8" />
+    <meta name="msapplication-TileColor" content="#0080A8" />
+    <meta name="msapplication-navbutton-color" content="#0080A8" />
+    <!-- Fonts (Preconnect + Async Load for CLS fix) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Performance -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v5" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v5" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <style>
+      body {
+        background: #f7f8fa;
+        font-family: Arial;
+      }
+
+      .page-title {
+        text-align: center;
+        margin: 60px 0;
+        font-size: 36px;
+        font-weight: 700;
+        color: #0f1d3a;
+      }
+
+      .car-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+        padding: 0 20px 60px;
+      }
+
+      .car-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 25px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .car-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .car-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #2bb673;
+        margin-bottom: 25px;
+      }
+
+      .book-btn {
+        background: #141b34;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+      }
+
+      section#car-rental-page {
+        padding: 70px 0;
+      }
+
+      .car-card a.book-btn:hover {
+        color: #2bb673;
+      }
+    </style>
+  </head>
+
+  <body class="inner-page">
+    <!-- HEADER START -->
+    <header id="navigation_bar">
+      <nav class="navbar navbar-expand-xl main-header">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <!-- White logo for homepage -->
+            <img
+              src="assets/images/logo.svg"
+              class="logo logo-light"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
+
+            <!-- Dark logo for inner pages -->
+            <img
+              src="assets/images/logo-black.svg"
+              class="logo logo-dark"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
+          </a>
+
+          <!-- Hamburger -->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mainMenu"
+          >
+            <img
+              src="assets/images/hamburger-menu.svg"
+              width="60"
+              height="35"
+            />
+          </button>
+
+          <!-- Offcanvas -->
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu">
+            <div class="offcanvas-header">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo-black.svg"
+                  width="163"
+                  height="25"
+                />
+              </a>
+
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#popular-destinations"
+                    >Places</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#travel-services"
+                    >About</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#trip-gallery">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link btn main-btn" href="#bookingForm">
+                    <span class="btn-text">Take a Trip</span>
+
+                    <img
+                      src="./assets/images/plane-yellow.gif"
+                      class="plane-icon"
+                      alt="plane"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER END -->
+
+    <main>
+      <div class="page-wrapper">
+        <section id="car-rental-page">
+          <h1 class="page-title">Choose Your Rental Car</h1>
+
+          <div class="car-grid">
+            <div class="car-card">
+              <h3>Sedan</h3>
+              <p>Perfect for city travel and couples.</p>
+              <div class="price">₹1500 / day</div>
+              <a href="index.html?transport=cab" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="car-card">
+              <h3>SUV</h3>
+              <p>Best for family trips and mountain roads.</p>
+              <div class="price">₹2500 / day</div>
+              <a href="index.html?transport=cab" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="car-card">
+              <h3>Luxury Car</h3>
+              <p>Premium comfort and luxury ride.</p>
+              <div class="price">₹4500 / day</div>
+              <a href="index.html?transport=cab" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer Start -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo + description -->
+          <div class="footer-logo">
+            <img
+              src="assets/images/logo-black.svg"
+              alt="logo"
+              width="154"
+              height="42"
+            />
+
+            <!-- <p class="footer-desc">
+Discover the world's most amazing places with SkyRoute. 
+We help you plan unforgettable journeys.
+</p> -->
+          </div>
+
+          <!-- Menu -->
+          <ul class="footer-menu">
+            <a href="index.html#popular-destinations">Places</a>
+            <a href="index.html#travel-services">About</a>
+            <a href="index.html#trip-gallery">Blog</a>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Button -->
+          <div class="footer-btn">
+            <a
+              class="nav-link footer btn main-btn"
+              href="#bookingForm"
+              role="button"
+            >
+              <span class="btn-text">Take a Trip</span>
+
+              <img
+                src="./assets/images/plane-yellow.gif"
+                class="plane-icon"
+                alt="plane"
+              />
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <p>Copyright © SkyRoute 2026</p>
+
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+          </div>
+
+          <div class="footer-social">
+            <a href="#"
+              ><img src="./assets/images/instagram.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/linkedin.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/facebook.svg" width="24"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- JS Files (defer for performance) -->
+    <script src="assets/js/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/init.js?v9" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
+</html>

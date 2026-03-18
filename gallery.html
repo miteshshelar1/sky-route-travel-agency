@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- SEO Essentials -->
+    <title>Sky Route Travel Agency</title>
+    <meta name="description" content="Sky Route Travel Agency" />
+    <meta name="keywords" content="Sky Route Travel Agency" />
+    <meta name="author" content="Sky Route Travel Agency" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Sky Route Travel Agency" />
+    <meta property="og:description" content="Sky Route Travel Agency" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Canonical -->
+    <link rel="canonical" href="" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#0080A8" />
+    <meta name="msapplication-TileColor" content="#0080A8" />
+    <meta name="msapplication-navbutton-color" content="#0080A8" />
+    <!-- Fonts (Preconnect + Async Load for CLS fix) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Performance -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v5" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v5" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <style>
+      .gallery-page {
+        padding: 80px 0;
+        background: #f5f7fa;
+      }
+
+      .gallery-grid {
+        margin-top: 40px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        display: block;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .gallery-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        color: var(--white-color);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      }
+
+      .gallery-info p {
+        color: var(--white-color);
+      }
+
+      .gallery-info h4 {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+
+      .gallery-info p {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+
+  <body class="inner-page">
+    <!-- HEADER START -->
+    <header id="navigation_bar">
+      <nav class="navbar navbar-expand-xl main-header">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <!-- White logo for homepage -->
+            <img
+              src="assets/images/logo.svg"
+              class="logo logo-light"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
+
+            <!-- Dark logo for inner pages -->
+            <img
+              src="assets/images/logo-black.svg"
+              class="logo logo-dark"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
+          </a>
+
+          <!-- Hamburger -->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mainMenu"
+          >
+            <img
+              src="assets/images/hamburger-menu.svg"
+              width="60"
+              height="35"
+            />
+          </button>
+
+          <!-- Offcanvas -->
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu">
+            <div class="offcanvas-header">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo-black.svg"
+                  width="163"
+                  height="25"
+                />
+              </a>
+
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#popular-destinations"
+                    >Places</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#travel-services"
+                    >About</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#trip-gallery">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link btn main-btn" href="#bookingForm">
+                    <span class="btn-text">Take a Trip</span>
+
+                    <img
+                      src="./assets/images/plane-yellow.gif"
+                      class="plane-icon"
+                      alt="plane"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER END -->
+    <main>
+      <div class="page-wrapper">
+        <section class="gallery-page">
+          <div class="container">
+            <div class="text-center mt-5">
+              <h2>Travel Journey Gallery</h2>
+              <p>Memories from our travelers around the world</p>
+            </div>
+
+            <div class="row gallery-grid g-4">
+              <!-- SANTORINI -->
+
+              <div class="col-lg-4">
+                <a
+                  href="./assets/images/home/santorini.png"
+                  class="gallery-item glightbox"
+                >
+                  <img src="./assets/images/home/santorini.png" />
+
+                  <div class="gallery-info">
+                    <h4>Santorini Island</h4>
+                    <p>Santorini, Greece • 32 Romantic Trips</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- BALI -->
+
+              <div class="col-lg-4">
+                <a
+                  href="./assets/images/home/bali-island.png"
+                  class="gallery-item glightbox"
+                >
+                  <img src="./assets/images/home/bali-island.png" />
+
+                  <div class="gallery-info">
+                    <h4>Bali Island</h4>
+                    <p>Bali, Indonesia • 40 Beach Tours</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- SWISS ALPS -->
+
+              <div class="col-lg-4">
+                <a
+                  href="./assets/images/home/swiss-alps.png"
+                  class="gallery-item glightbox"
+                >
+                  <img src="./assets/images/home/swiss-alps.png" />
+
+                  <div class="gallery-info">
+                    <h4>Swiss Alps</h4>
+                    <p>Switzerland • 28 Mountain Adventures</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- DUBAI DESERT -->
+
+              <div class="col-lg-4">
+                <a
+                  href="./assets/images/home/dubai-desert.png"
+                  class="gallery-item glightbox"
+                >
+                  <img src="./assets/images/home/dubai-desert.png" />
+
+                  <div class="gallery-info">
+                    <h4>Dubai Desert</h4>
+                    <p>Dubai, UAE • 15 Adventure Tours</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- MALDIVES -->
+
+              <div class="col-lg-4">
+                <a
+                  href="./assets/images/home/maldives.png"
+                  class="gallery-item glightbox"
+                >
+                  <img src="./assets/images/home/maldives.png" />
+
+                  <div class="gallery-info">
+                    <h4>Maldives</h4>
+                    <p>Maldives • 35 Luxury Trips</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- BALI -->
+
+              <div class="col-lg-4">
+                <a
+                  href="./assets/images/home/lets-us-thumb.png"
+                  class="gallery-item glightbox"
+                >
+                  <img src="./assets/images/home/lets-us-thumb.png" />
+
+                  <div class="gallery-info">
+                    <h4>Bali Beach</h4>
+                    <p>Bali, Indonesia • 30 Luxury Trips</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer Start -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo + description -->
+          <div class="footer-logo">
+            <img
+              src="assets/images/logo-black.svg"
+              alt="logo"
+              width="154"
+              height="42"
+            />
+
+            <!-- <p class="footer-desc">
+Discover the world's most amazing places with SkyRoute. 
+We help you plan unforgettable journeys.
+</p> -->
+          </div>
+
+          <!-- Menu -->
+          <ul class="footer-menu">
+            <a href="index.html#popular-destinations">Places</a>
+            <a href="index.html#travel-services">About</a>
+            <a href="index.html#trip-gallery">Blog</a>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Button -->
+          <div class="footer-btn">
+            <a
+              class="nav-link footer btn main-btn"
+              href="#bookingForm"
+              role="button"
+            >
+              <span class="btn-text">Take a Trip</span>
+
+              <img
+                src="./assets/images/plane-yellow.gif"
+                class="plane-icon"
+                alt="plane"
+              />
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <p>Copyright © SkyRoute 2026</p>
+
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+          </div>
+
+          <div class="footer-social">
+            <a href="#"
+              ><img src="./assets/images/instagram.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/linkedin.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/facebook.svg" width="24"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- JS Files (defer for performance) -->
+    <script src="assets/js/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/init.js?v9" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    </script>
+
+    <script>
+      const lightbox = GLightbox({
+        selector: ".glightbox",
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- SEO Essentials -->
+    <title>Sky Route Travel Agency</title>
+    <meta name="description" content="Sky Route Travel Agency" />
+    <meta name="keywords" content="Sky Route Travel Agency" />
+    <meta name="author" content="Sky Route Travel Agency" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Sky Route Travel Agency" />
+    <meta property="og:description" content="Sky Route Travel Agency" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Canonical -->
+    <link rel="canonical" href="" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#0080A8" />
+    <meta name="msapplication-TileColor" content="#0080A8" />
+    <meta name="msapplication-navbutton-color" content="#0080A8" />
+    <!-- Fonts (Preconnect + Async Load for CLS fix) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Performance -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v5" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v5" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <style>
+      /* ==============================
+   CONTACT SECTION
+================================*/
+
+      .contact-section {
+        padding: 100px 0;
+        background: #f6f8fb;
+      }
+
+      .contact-card {
+        background: #fff;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+        max-width: 900px;
+        margin: auto;
+      }
+
+      /* ==============================
+   HEADING
+================================*/
+
+      .contact-title {
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .contact-sub {
+        color: #6b7280;
+        margin-bottom: 35px;
+        text-align: center;
+        font-size: 15px;
+      }
+
+      /* ==============================
+   FORM FIELD
+================================*/
+
+      .contact-field {
+        margin-bottom: 22px;
+      }
+
+      .contact-field label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+        font-size: 14px;
+        color: #222;
+      }
+
+      /* ==============================
+   INPUT / SELECT / TEXTAREA
+================================*/
+
+      .contact-field input,
+      .contact-field select,
+      .contact-field textarea {
+        width: 100%;
+        height: 48px;
+        padding: 0 14px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        outline: none;
+        background: #fff;
+        font-size: 14px;
+        transition: all 0.25s ease;
+      }
+
+      /* textarea special */
+
+      .contact-field textarea {
+        height: 120px;
+        padding: 12px 14px;
+        resize: none;
+      }
+
+      /* ==============================
+   FOCUS EFFECT
+================================*/
+
+      .contact-field input:focus,
+      .contact-field select:focus,
+      .contact-field textarea:focus {
+        border-color: #ccf32f;
+        box-shadow: 0 0 0 3px rgba(204, 243, 47, 0.15);
+      }
+
+      /* ==============================
+   ERROR TEXT
+================================*/
+
+      .form-error {
+        color: #e53935;
+        font-size: 13px;
+        margin-top: 5px;
+        display: block;
+      }
+
+      /* ==============================
+   BUTTON
+================================*/
+
+      .contact-btn {
+        background: #ccf32f;
+        border: none;
+        padding: 14px 36px;
+        border-radius: 40px;
+        font-weight: 600;
+        margin-top: 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      /* hover */
+
+      .contact-btn:hover {
+        background: #bde01e;
+        transform: translateY(-2px);
+      }
+
+      /* ==============================
+   POPUP
+================================*/
+
+      .contact-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+
+      .contact-popup-box {
+        background: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 420px;
+        width: 90%;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+      }
+
+      .popup-trip-info {
+        margin: 20px 0;
+        text-align: left;
+      }
+
+      .popup-trip-info p {
+        margin: 6px 0;
+        font-size: 14px;
+      }
+
+      .popup-btn {
+        background: #ccf32f;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      /* ==============================
+   RESPONSIVE
+================================*/
+
+      @media (max-width: 768px) {
+        .contact-card {
+          padding: 35px 25px;
+        }
+
+        .contact-title {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="inner-page">
+    <!-- HEADER START -->
+    <header id="navigation_bar">
+      <nav class="navbar navbar-expand-xl main-header">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <!-- White logo for homepage -->
+            <img
+              src="assets/images/logo.svg"
+              class="logo logo-light"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
+
+            <!-- Dark logo for inner pages -->
+            <img
+              src="assets/images/logo-black.svg"
+              class="logo logo-dark"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
+          </a>
+
+          <!-- Hamburger -->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mainMenu"
+          >
+            <img
+              src="assets/images/hamburger-menu.svg"
+              width="60"
+              height="35"
+            />
+          </button>
+
+          <!-- Offcanvas -->
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu">
+            <div class="offcanvas-header">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo-black.svg"
+                  width="163"
+                  height="25"
+                />
+              </a>
+
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#popular-destinations"
+                    >Places</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#travel-services"
+                    >About</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#trip-gallery">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link btn main-btn" href="#bookingForm">
+                    <span class="btn-text">Take a Trip</span>
+
+                    <img
+                      src="./assets/images/plane-yellow.gif"
+                      class="plane-icon"
+                      alt="plane"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER END -->
+    <main>
+      <div class="page-wrapper">
+        <section class="contact-section">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="contact-card">
+                  <h2 class="contact-title text-center">Contact Us</h2>
+
+                  <p class="contact-sub text-center">
+                    Have a question or want to plan your next trip? Send us a
+                    message.
+                  </p>
+
+                  <form id="contactForm">
+                    <div class="row">
+                      <!-- NAME -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>Full Name</label>
+
+                          <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                          />
+
+                          <span class="form-error" id="nameError"></span>
+                        </div>
+                      </div>
+
+                      <!-- EMAIL -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>Email Address</label>
+
+                          <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                          />
+
+                          <span class="form-error" id="emailError"></span>
+                        </div>
+                      </div>
+
+                      <!-- PHONE -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>Phone Number</label>
+
+                          <input
+                            type="text"
+                            id="phone"
+                            placeholder="Enter phone number"
+                          />
+
+                          <span class="form-error" id="phoneError"></span>
+                        </div>
+                      </div>
+
+                      <!-- COUNTRY -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>Country</label>
+
+                          <select id="country">
+                            <option value="">Select Country</option>
+                            <option value="india">India</option>
+                          </select>
+
+                          <span class="form-error" id="countryError"></span>
+                        </div>
+                      </div>
+
+                      <!-- STATE -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>State</label>
+
+                          <select id="state">
+                            <option value="">Select State</option>
+                          </select>
+
+                          <span class="form-error" id="stateError"></span>
+                        </div>
+                      </div>
+
+                      <!-- CITY -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>City</label>
+
+                          <select id="city">
+                            <option value="">Select City</option>
+                          </select>
+
+                          <span class="form-error" id="cityError"></span>
+                        </div>
+                      </div>
+
+                      <!-- PINCODE -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>Pincode</label>
+
+                          <input
+                            type="text"
+                            id="pincode"
+                            placeholder="Auto fill"
+                            readonly
+                          />
+                        </div>
+                      </div>
+
+                      <!-- MESSAGE -->
+                      <div class="col-md-6">
+                        <div class="contact-field">
+                          <label>Message</label>
+
+                          <textarea
+                            id="message"
+                            placeholder="Write your message"
+                          ></textarea>
+
+                          <span class="form-error" id="messageError"></span>
+                        </div>
+                      </div>
+
+                      <!-- BUTTON -->
+                      <div class="col-md-12 text-center">
+                        <button type="submit" class="contact-btn">
+                          Send Message
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="contact-popup" id="contactPopup">
+          <div class="contact-popup-box">
+            <h2>🎉 Thank You!</h2>
+
+            <p>
+              Your message has been received. Our travel expert will contact you
+              shortly.
+            </p>
+
+            <div class="popup-trip-info">
+              <p>✈️ Free Travel Consultation</p>
+              <p>🌍 Best Tour Packages</p>
+              <p>🏨 Hotel + Transport Planning</p>
+            </div>
+
+            <button onclick="closeContactPopup()" class="popup-btn">
+              Continue Exploring
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Start -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo + description -->
+          <div class="footer-logo">
+            <img
+              src="assets/images/logo-black.svg"
+              alt="logo"
+              width="154"
+              height="42"
+            />
+
+            <!-- <p class="footer-desc">
+Discover the world's most amazing places with SkyRoute. 
+We help you plan unforgettable journeys.
+</p> -->
+          </div>
+
+          <!-- Menu -->
+          <ul class="footer-menu">
+            <a href="index.html#popular-destinations">Places</a>
+            <a href="index.html#travel-services">About</a>
+            <a href="index.html#trip-gallery">Blog</a>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Button -->
+          <div class="footer-btn">
+            <a
+              class="nav-link footer btn main-btn"
+              href="#bookingForm"
+              role="button"
+            >
+              <span class="btn-text">Take a Trip</span>
+
+              <img
+                src="./assets/images/plane-yellow.gif"
+                class="plane-icon"
+                alt="plane"
+              />
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <p>Copyright © SkyRoute 2026</p>
+
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+          </div>
+
+          <div class="footer-social">
+            <a href="#"
+              ><img src="./assets/images/instagram.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/linkedin.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/facebook.svg" width="24"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JS Files (defer for performance) -->
+    <script src="assets/js/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/init.js?v9" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    </script>
+
+    <script>
+      const locationData = {
+        india: {
+          Maharashtra: {
+            Mumbai: "400001",
+            Pune: "411001",
+            Nagpur: "440001",
+          },
+
+          Gujarat: {
+            Ahmedabad: "380001",
+            Surat: "395003",
+            Vadodara: "390001",
+          },
+
+          Delhi: {
+            Delhi: "110001",
+          },
+        },
+      };
+    </script>
+    <script>
+      const country = document.getElementById("country");
+      const state = document.getElementById("state");
+      const city = document.getElementById("city");
+      const pincode = document.getElementById("pincode");
+
+      country.addEventListener("change", function () {
+        state.innerHTML = "<option value=''>Select State</option>";
+        city.innerHTML = "<option value=''>Select City</option>";
+        pincode.value = "";
+
+        let states = locationData[this.value];
+
+        for (let s in states) {
+          let option = document.createElement("option");
+          option.value = s;
+          option.text = s;
+
+          state.appendChild(option);
+        }
+      });
+
+      state.addEventListener("change", function () {
+        city.innerHTML = "<option value=''>Select City</option>";
+        pincode.value = "";
+
+        let cities = locationData[country.value][this.value];
+
+        for (let c in cities) {
+          let option = document.createElement("option");
+          option.value = c;
+          option.text = c;
+
+          city.appendChild(option);
+        }
+      });
+
+      city.addEventListener("change", function () {
+        pincode.value = locationData[country.value][state.value][this.value];
+      });
+    </script>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let name = document.getElementById("name").value.trim();
+          let email = document.getElementById("email").value.trim();
+          let phone = document.getElementById("phone").value.trim();
+          let countryVal = document.getElementById("country").value;
+          let stateVal = document.getElementById("state").value;
+          let cityVal = document.getElementById("city").value;
+          let pincodeVal = document.getElementById("pincode").value;
+          let message = document.getElementById("message").value.trim();
+
+          let valid = true;
+
+          document
+            .querySelectorAll(".form-error")
+            .forEach((el) => (el.innerText = ""));
+
+          /* NAME VALIDATION */
+
+          let nameRegex = /^[A-Za-z\s]+$/;
+
+          if (name === "") {
+            document.getElementById("nameError").innerText = "Name required";
+            valid = false;
+          } else if (!nameRegex.test(name)) {
+            document.getElementById("nameError").innerText =
+              "Only letters allowed";
+            valid = false;
+          }
+
+          /* EMAIL */
+
+          if (email === "") {
+            document.getElementById("emailError").innerText = "Email required";
+            valid = false;
+          }
+
+          /* PHONE VALIDATION */
+
+          let phoneRegex = /^[0-9]{10,15}$/;
+
+          if (phone === "") {
+            document.getElementById("phoneError").innerText = "Phone required";
+            valid = false;
+          } else if (!phoneRegex.test(phone)) {
+            document.getElementById("phoneError").innerText =
+              "Enter valid phone number";
+            valid = false;
+          }
+
+          /* COUNTRY */
+
+          if (countryVal === "") {
+            document.getElementById("countryError").innerText =
+              "Select country";
+            valid = false;
+          }
+
+          /* STATE */
+
+          if (stateVal === "") {
+            document.getElementById("stateError").innerText = "Select state";
+            valid = false;
+          }
+
+          /* CITY */
+
+          if (cityVal === "") {
+            document.getElementById("cityError").innerText = "Select city";
+            valid = false;
+          }
+
+          /* MESSAGE */
+
+          if (message === "") {
+            document.getElementById("messageError").innerText =
+              "Message required";
+            valid = false;
+          }
+
+          if (!valid) return;
+
+          /* SEND DATA */
+
+          fetch("backend/save_contact.php", {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              phone: phone,
+              country: countryVal,
+              state: stateVal,
+              city: cityVal,
+              pincode: pincodeVal,
+              message: message,
+            }),
+          })
+            .then((res) => res.text())
+            .then((data) => {
+              console.log(data);
+
+              document.getElementById("contactPopup").style.display = "flex";
+
+              document.getElementById("contactForm").reset();
+            });
+        });
+    </script>
+    <script>
+      function closeContactPopup() {
+        document.getElementById("contactPopup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

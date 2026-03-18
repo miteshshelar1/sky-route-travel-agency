@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- SEO Essentials -->
@@ -28,1262 +27,1584 @@
     <meta name="msapplication-navbutton-color" content="#0080A8" />
     <!-- Fonts (Preconnect + Async Load for CLS fix) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS Performance -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css?v5" />
     <link rel="stylesheet" href="assets/css/responsive.css?v5" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+  </head>
 
-<body>
-    <!-- Flight animation -->
-    <!-- <div class="flight-overlay">
-
-        <svg viewBox="0 0 1200 800" class="flight-svg">
-
-            <path id="flightPath" d="M50 150 
-C300 20 500 200 700 120
-S1000 200 1150 100" stroke="#0E3D4D" stroke-width="2" fill="none" stroke-dasharray="6 8" />
-
-        </svg>
-
-        <img src="assets/images/plane-yellow.gif" class="scroll-plane">
-
-    </div> -->
-    <!-- Flight animation -->
+  <body class="home-page">
     <!-- Loader Start Here -->
     <div class="loader-bg">
-        <div class="loader">
-
-            <!-- Circular Logo -->
-            <!-- <div class="travel-logo">
+      <div class="loader">
+        <!-- Circular Logo -->
+        <!-- <div class="travel-logo">
             <svg viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="55"></circle>
             </svg>
         </div> -->
-            <div class="loader-bg">
-                <div class="loader">
-
-                    <div class="travel-logo">
-                        <svg viewBox="0 0 120 120">
-                            <circle cx="60" cy="60" r="55"></circle>
-                        </svg>
-                    </div>
-
-                    <div class="plane">✈</div>
-
-                </div>
+        <div class="loader-bg">
+          <div class="loader">
+            <div class="travel-logo">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="55"></circle>
+              </svg>
             </div>
-            <!-- Plane -->
-            <div class="plane">✈</div>
 
+            <div class="plane">✈</div>
+          </div>
         </div>
+        <!-- Plane -->
+        <div class="plane">✈</div>
+      </div>
     </div>
     <!-- HEADER START -->
-
     <header id="navigation_bar">
+      <nav class="navbar navbar-expand-xl main-header">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <!-- White logo for homepage -->
+            <img
+              src="assets/images/logo.svg"
+              class="logo logo-light"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
 
+            <!-- Dark logo for inner pages -->
+            <img
+              src="assets/images/logo-black.svg"
+              class="logo logo-dark"
+              alt="SkyRoute Travel"
+              width="163"
+              height="25"
+            />
+          </a>
 
-        <nav class="navbar navbar-expand-xl transparent-header">
-            <div class="container">
+          <!-- Hamburger -->
 
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="SkyRoute Travel" width="163" height="25" class="img-fluid">
-                </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mainMenu"
+          >
+            <img
+              src="assets/images/hamburger-menu.svg"
+              width="60"
+              height="35"
+            />
+          </button>
 
-                <!-- Hamburger -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu"
-                    aria-controls="mainMenu" aria-label="Toggle navigation">
+          <!-- Offcanvas -->
 
-                    <img src="assets/images/hamburger-menu.svg" alt="Menu" width="28" height="17" class="img-fluid">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu">
+            <div class="offcanvas-header">
+              <a href="index.html">
+                <img
+                  src="assets/images/logo-black.svg"
+                  width="163"
+                  height="25"
+                />
+              </a>
 
-                </button>
-
-                <!-- Offcanvas Menu -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu">
-
-                    <!-- Offcanvas Header -->
-                    <div class="offcanvas-header">
-
-                        <a href="index.html">
-                            <img src="assets/images/logo.svg" alt="SkyRoute Travel" width="163" height="25"
-                                class="img-fluid">
-                        </a>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-
-                    </div>
-
-                    <!-- Menu Links -->
-                    <div class="offcanvas-body">
-
-                        <ul class="navbar-nav ms-auto">
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Places</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <!-- <a class="nav-link btn" href="">Take a Trip </a> -->
-                                <a class="nav-link btn main-btn" href="#" role="button">
-
-                                    <span class="btn-text">Take a Trip</span>
-
-                                    <img src="./assets/images/plane-yellow.gif" class="plane-icon" alt="plane">
-
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
             </div>
-        </nav>
 
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#popular-destinations"
+                    >Places</a
+                  >
+                </li>
 
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#travel-services"
+                    >About</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#trip-gallery">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link btn main-btn" href="#bookingForm">
+                    <span class="btn-text">Take a Trip</span>
+
+                    <img
+                      src="./assets/images/plane-yellow.gif"
+                      class="plane-icon"
+                      alt="plane"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-
-
-    <!-- HEADER ENDS -->
+    <!-- HEADER END -->
     <main>
-        <div class="page-wrapper">
-            <!-- Home Banner Section Start  -->
-            <section id="home-banner" class="banner">
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="home-banner-slider swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="slide-zoom-layer">
-                                            <div class="home-banner-img">
-                                                <picture>
-                                                    <!-- Mobile WebP -->
-                                                    <source media="(max-width: 991px)"
-                                                        srcset="assets/images/home/home-banner-mobile-1.webp"
-                                                        type="image/webp" />
-                                                    <!-- Mobile JPEG fallback -->
-                                                    <source media="(max-width: 991px)"
-                                                        srcset="assets/images/home/home-banner-mobile-1.jpg"
-                                                        type="image/jpeg" />
-                                                    <!-- Desktop WebP -->
-                                                    <source media="(min-width: 768px)"
-                                                        srcset="assets/images/home/home-banner-1.webp"
-                                                        type="image/webp" />
-                                                    <!-- Desktop JPEG fallback -->
-                                                    <source media="(min-width: 768px)"
-                                                        srcset="assets/images/home/home-banner-1.jpg"
-                                                        type="image/jpeg" />
-                                                    <!-- Default image fallback -->
-                                                    <img src="assets/images/home/home-banner-1.jpg" alt="Lifestyle"
-                                                        class="img-fluid" width="1512" height="550" loading="lazy" />
-                                                </picture>
-                                            </div>
-                                        </div>
-                                        <div class="container home-banner-box">
-                                            <div class="home-banner-content">
-                                                <h1>
-                                                    Since 1996, we've turned potential into progress for more than 9.6
-                                                    million people
-                                                </h1>
-                                                <p>Since 1996, our initiatives have transformed the lives of 9.6
-                                                    million people across India.</p>
-
-                                                <a class="main-btn" href="#" role="button">
-
-                                                    <span class="btn-text">Take a Trip</span>
-
-                                                    <img src="./assets/images/plane-yellow.gif" class="plane-icon"
-                                                        alt="plane">
-
-                                                </a>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slide-zoom-layer">
-                                            <div class="home-banner-img">
-                                                <picture>
-                                                    <!-- Mobile WebP -->
-                                                    <source media="(max-width: 991px)"
-                                                        srcset="assets/images/home/home-banner-mobile-1.webp"
-                                                        type="image/webp" />
-                                                    <!-- Mobile JPEG fallback -->
-                                                    <source media="(max-width: 991px)"
-                                                        srcset="assets/images/home/home-banner-mobile-1.jpg"
-                                                        type="image/jpeg" />
-                                                    <!-- Desktop WebP -->
-                                                    <source media="(min-width: 768px)"
-                                                        srcset="assets/images/home/home-banner-1.webp"
-                                                        type="image/webp" />
-                                                    <!-- Desktop JPEG fallback -->
-                                                    <source media="(min-width: 768px)"
-                                                        srcset="assets/images/home/home-banner-1.jpg"
-                                                        type="image/jpeg" />
-                                                    <!-- Default image fallback -->
-                                                    <img src="assets/images/home/home-banner-1.jpg" alt="Lifestyle"
-                                                        class="img-fluid" width="1512" height="550" loading="lazy" />
-                                                </picture>
-                                            </div>
-                                        </div>
-                                        <div class="container home-banner-box">
-                                            <div class="home-banner-content">
-                                                <h1>
-                                                    Since 1996, we've turned potential into progress for more than 9.6
-                                                    million people
-                                                </h1>
-                                                <p>Since 1996, our initiatives have transformed the lives of 9.6
-                                                    million people across India.</p>
-                                                <a class="main-btn" href="#" role="button">
-
-                                                    <span class="btn-text">Take a Trip</span>
-
-                                                    <img src="./assets/images/plane-yellow.gif" class="plane-icon"
-                                                        alt="plane">
-
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slide-zoom-layer">
-                                            <div class="home-banner-img">
-                                                <picture>
-                                                    <!-- Mobile WebP -->
-                                                    <source media="(max-width: 991px)"
-                                                        srcset="assets/images/home/home-banner-mobile-1.webp"
-                                                        type="image/webp" />
-                                                    <!-- Mobile JPEG fallback -->
-                                                    <source media="(max-width: 991px)"
-                                                        srcset="assets/images/home/home-banner-mobile-1.jpg"
-                                                        type="image/jpeg" />
-                                                    <!-- Desktop WebP -->
-                                                    <source media="(min-width: 768px)"
-                                                        srcset="assets/images/home/home-banner-1.webp"
-                                                        type="image/webp" />
-                                                    <!-- Desktop JPEG fallback -->
-                                                    <source media="(min-width: 768px)"
-                                                        srcset="assets/images/home/home-banner-1.jpg"
-                                                        type="image/jpeg" />
-                                                    <!-- Default image fallback -->
-                                                    <img src="assets/images/home/home-banner-1.jpg" alt="Lifestyle"
-                                                        class="img-fluid" width="1512" height="550" loading="lazy" />
-                                                </picture>
-                                            </div>
-                                        </div>
-                                        <div class="container home-banner-box">
-                                            <div class="home-banner-content">
-                                                <h1>
-                                                    Since 1996, we've turned potential into progress for more than 9.6
-                                                    million people
-                                                </h1>
-                                                <p>Since 1996, our initiatives have transformed the lives of 9.6
-                                                    million people across India.</p>
-                                                <a class="main-btn" href="#" role="button">
-
-                                                    <span class="btn-text">Take a Trip</span>
-
-                                                    <img src="./assets/images/plane-yellow.gif" class="plane-icon"
-                                                        alt="plane">
-
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="home-banner-nav">
-                                    <div class="nav-item active" data-slide="0">
-                                        <!-- <img src="assets/images/home/home-banner-1.jpg" alt="" class="img-fluid"> -->
-                                        <span class="number-count">01</span>
-                                        <span>Empowering Millions</span>
-                                    </div>
-                                    <div class="nav-item" data-slide="1">
-                                        <!-- <img src="assets/images/home/home-banner-2.jpg" alt="" class="img-fluid"> -->
-                                        <span class="number-count">02</span>
-                                        <span>Education</span>
-                                    </div>
-                                    <div class="nav-item" data-slide="2">
-                                        <!-- <img src="assets/images/home/home-banner-3.jpg" alt="" class="img-fluid"> -->
-                                        <span class="number-count">03</span>
-                                        <span>Health & Nutrition</span>
-                                    </div>
-
-                                </div>
-                                <!-- Custom Arrows -->
-                                <div class="home-banner-arrows">
-
-                                    <button class="arrow-btn prev-btn banner-prev" aria-label="Previous slide">
-                                        <img src="assets/images/slider-arrow.svg" alt="Previous">
-                                    </button>
-
-                                    <div class="slide-count">
-                                        <span class="current">1</span>/<span class="total">3</span>
-                                    </div>
-
-                                    <button class="arrow-btn next-btn banner-next" aria-label="Next slide">
-                                        <img src="assets/images/slider-arrow.svg" alt="Next">
-                                    </button>
-
-                                </div>
-                                <!-- Mobile Pagination Dots -->
-                                <!-- <div class="swiper-pagination home-banner-dots"></div> -->
-                            </div>
+      <div class="page-wrapper">
+        <!-- Home Banner Section Start  -->
+        <section id="home-banner" class="banner">
+          <div class="container-fluid p-0">
+            <div class="row">
+              <div class="col-12">
+                <div class="home-banner-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slide-zoom-layer">
+                        <div class="home-banner-img">
+                          <picture>
+                            <!-- Mobile WebP -->
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="
+                                assets/images/home/home-banner-mobile-1.webp
+                              "
+                              type="image/webp"
+                            />
+                            <!-- Mobile JPEG fallback -->
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="
+                                assets/images/home/home-banner-mobile-1.jpg
+                              "
+                              type="image/jpeg"
+                            />
+                            <!-- Desktop WebP -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="assets/images/home/home-banner-1.webp"
+                              type="image/webp"
+                            />
+                            <!-- Desktop JPEG fallback -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="assets/images/home/home-banner-1.jpg"
+                              type="image/jpeg"
+                            />
+                            <!-- Default image fallback -->
+                            <img
+                              src="assets/images/home/home-banner-1.jpg"
+                              alt="Lifestyle"
+                              class="img-fluid"
+                              width="1512"
+                              height="550"
+                              loading="lazy"
+                            />
+                          </picture>
                         </div>
+                      </div>
+                      <div class="container home-banner-box">
+                        <div class="home-banner-content">
+                          <h1>Discover Your Next Adventure With SkyRoute</h1>
+                          <p>
+                            Explore the world's most beautiful destinations with
+                            our expertly curated travel packages. Your dream
+                            vacation starts here.
+                          </p>
+
+                          <a class="main-btn" href="#bookingForm" role="button">
+                            <span class="btn-text">Take a Trip</span>
+
+                            <img
+                              src="./assets/images/plane-yellow.gif"
+                              class="plane-icon"
+                              alt="plane"
+                            />
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                </div>
-            </section>
-            <!-- Home Banner Section End  -->
-            <div class="booking-bg">
-                <section class="booking-section">
-
-                    <div class="container">
-
-                        <form id="bookingForm" data-aos="fade-up">
-
-                            <div class="booking-box">
-
-                                <!-- Departure City -->
-                                <div class="booking-field icon-field">
-
-                                    <label for="departure">
-                                        <img src="./assets/images/city.svg" width="20" alt=""> Departure City
-                                    </label>
-
-                                    <div class="input-icon">
-                                        <input type="text" id="departure" name="departure"
-                                            placeholder="From where are you travelling?" list="cityList"
-                                            autocomplete="off" required>
-                                    </div>
-
-                                </div>
-
-
-                                <!-- Destination -->
-                                <div class="booking-field icon-field">
-
-                                    <label for="destination">
-                                        <img src="./assets/images/location.svg" width="20" alt=""> Destination
-                                    </label>
-
-                                    <div class="input-icon">
-                                        <input type="text" id="destination" name="destination"
-                                            placeholder="Where are you going?" list="cityList" autocomplete="off"
-                                            required>
-                                    </div>
-
-                                </div>
-
-
-                                <!-- City Suggestions -->
-                                <datalist id="cityList">
-
-                                    <option value="Mumbai">
-                                    <option value="Goa">
-                                    <option value="Delhi">
-                                    <option value="Bali">
-                                    <option value="Dubai">
-                                    <option value="Thailand">
-                                    <option value="Maldives">
-                                    <option value="Singapore">
-                                    <option value="Paris">
-                                    <option value="London">
-
-                                </datalist>
-
-
-                                <!-- Travel Date -->
-                                <div class="booking-field icon-field">
-
-                                    <label for="travelDate">
-                                        <img src="./assets/images/travel-date.svg" width="20" alt=""> Travel Date
-                                    </label>
-
-                                    <div class="input-icon">
-                                        <input type="date" id="travelDate" name="travelDate" required>
-                                    </div>
-
-                                </div>
-
-
-                                <!-- Return Date -->
-                                <div class="booking-field icon-field">
-
-                                    <label for="returnDate">
-                                        <img src="./assets/images/return-date.svg" width="20" alt=""> Return Date
-                                    </label>
-
-                                    <div class="input-icon">
-                                        <input type="date" id="returnDate" name="returnDate" required>
-                                    </div>
-
-                                </div>
-
-
-                                <!-- Travelers -->
-                                <div class="booking-field traveler-field">
-
-                                    <label>
-                                        <img src="./assets/images/traveler.svg" width="20" alt=""> Travelers
-                                    </label>
-
-                                    <div class="traveler-counter">
-
-                                        <button type="button" id="minusTraveler">−</button>
-
-                                        <input type="text" id="travelerCount" value="1" readonly>
-
-                                        <button type="button" id="addTraveler">+</button>
-
-                                    </div>
-
-                                </div>
-
-
-                                <!-- Package -->
-                                <div class="booking-field icon-field">
-
-                                    <label for="package">
-                                        <img src="./assets/images/budget.svg" width="20" alt=""> Budget / Package
-                                    </label>
-
-                                    <div class="input-icon package-wrapper">
-
-                                        <select id="package" name="package" required onchange="showPackageInfo()">
-
-                                            <option value="">Select Package</option>
-
-                                            <option value="budget" data-price="2000">
-                                                Budget Package
-                                            </option>
-
-                                            <option value="standard" data-price="3500">
-                                                Standard Package
-                                            </option>
-
-                                            <option value="luxury" data-price="6000">
-                                                Luxury Package
-                                            </option>
-
-                                            <option value="premium" data-price="9000">
-                                                Premium Package
-                                            </option>
-
-                                        </select>
-
-                                        <span class="package-info-icon" onclick="showPackageInfo()">ℹ️</span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <!-- Search Button -->
-                                <div class="booking-btn">
-
-                                    <button class="main-btn" id="searchTrip" type="button">
-
-                                        <span class="btn-text">Search Trip</span>
-
-                                        <img src="./assets/images/plane-yellow.gif" class="plane-icon" alt="plane">
-
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </form>
-
-
-
-                        <!-- Traveler Details Section -->
-                        <div class="traveler-details-wrapper" id="travelerDetailsWrapper" style="display:none">
-
-                            <div class="traveler-header">
-
-                                <h4>Traveler Details</h4>
-
-
-
-                            </div>
-
-                            <div id="travelerCards"></div>
-                            <button type="button" class="add-traveler-btn" onclick="triggerAddTraveler()">
-                                + Add Traveler
-                            </button>
-
+                    <div class="swiper-slide">
+                      <div class="slide-zoom-layer">
+                        <div class="home-banner-img">
+                          <picture>
+                            <!-- Mobile WebP -->
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="
+                                assets/images/home/home-banner-mobile-2.webp
+                              "
+                              type="image/webp"
+                            />
+                            <!-- Mobile JPEG fallback -->
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="
+                                assets/images/home/home-banner-mobile-2.jpg
+                              "
+                              type="image/jpeg"
+                            />
+                            <!-- Desktop WebP -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="assets/images/home/home-banner-2.webp"
+                              type="image/webp"
+                            />
+                            <!-- Desktop JPEG fallback -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="assets/images/home/home-banner-2.jpg"
+                              type="image/jpeg"
+                            />
+                            <!-- Default image fallback -->
+                            <img
+                              src="assets/images/home/home-banner-2.jpg"
+                              alt="Lifestyle"
+                              class="img-fluid"
+                              width="1512"
+                              height="550"
+                              loading="lazy"
+                            />
+                          </picture>
                         </div>
+                      </div>
+                      <div class="container home-banner-box">
+                        <div class="home-banner-content">
+                          <h1>Unforgettable Holidays Around The World</h1>
+                          <p>
+                            From tropical beaches to snowy mountains, we create
+                            memorable travel experiences for every type of
+                            traveler.
+                          </p>
+                          <a class="main-btn" href="#bookingForm" role="button">
+                            <span class="btn-text">Take a Trip</span>
 
+                            <img
+                              src="./assets/images/plane-yellow.gif"
+                              class="plane-icon"
+                              alt="plane"
+                            />
+                          </a>
+                        </div>
+                      </div>
                     </div>
-
-                </section>
-                <section class="marquee-section">
-                    <div class="blue-strip">
-                        <div class="marquee">
-
-                            <div class="marquee-content">
-                                <span>explore</span>
-                                <span>adventure</span>
-                                <span>luxury</span>
-                                <span>enjoy</span>
-                                <span>explore</span>
-
-                                <!-- duplicate for smooth loop -->
-                                <span>explore</span>
-                                <span>adventure</span>
-                                <span>luxury</span>
-                                <span>enjoy</span>
-                                <span>explore</span>
-                            </div>
-
+                    <div class="swiper-slide">
+                      <div class="slide-zoom-layer">
+                        <div class="home-banner-img">
+                          <picture>
+                            <!-- Mobile WebP -->
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="
+                                assets/images/home/home-banner-mobile-3.webp
+                              "
+                              type="image/webp"
+                            />
+                            <!-- Mobile JPEG fallback -->
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="
+                                assets/images/home/home-banner-mobile-3.jpg
+                              "
+                              type="image/jpeg"
+                            />
+                            <!-- Desktop WebP -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="assets/images/home/home-banner-3.webp"
+                              type="image/webp"
+                            />
+                            <!-- Desktop JPEG fallback -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="assets/images/home/home-banner-3.jpg"
+                              type="image/jpeg"
+                            />
+                            <!-- Default image fallback -->
+                            <img
+                              src="assets/images/home/home-banner-3.jpg"
+                              alt="Lifestyle"
+                              class="img-fluid"
+                              width="1512"
+                              height="550"
+                              loading="lazy"
+                            />
+                          </picture>
                         </div>
+                      </div>
+                      <div class="container home-banner-box">
+                        <div class="home-banner-content">
+                          <h1>Plan Your Perfect Journey Today</h1>
+                          <p>
+                            Let us handle your flights, hotels, and transport
+                            while you enjoy a stress-free and unforgettable
+                            trip.
+                          </p>
+                          <a class="main-btn" href="#bookingForm" role="button">
+                            <span class="btn-text">Take a Trip</span>
+
+                            <img
+                              src="./assets/images/plane-yellow.gif"
+                              class="plane-icon"
+                              alt="plane"
+                            />
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div class="yellow-strip"></div>
-                </section>
-            </div>
-
-            <section id="counter-info">
-
-                <div class="container">
-                    <div class="counter-info-content" data-aos="fade-up">
-                        <div class="row">
-
-                            <div class="col-lg-4">
-                                <div class="counter-info-box">
-                                    <div class="counter-info-icon">
-                                        <img src="assets/images/home/flexibility.svg" width="67" height="67">
-                                    </div>
-
-                                    <div class="counter-info-para">
-                                        <h3>
-                                            <span class="counter" data-target="332">0</span><span>K+</span>
-                                        </h3>
-                                        <h3>Enjoy some flexibility</h3>
-                                        <p>stays with flexible cancelation make it easy to re-book if your plans change
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div class="counter-info-box">
-                                    <div class="counter-info-icon">
-                                        <img src="assets/images/home/plain.svg" width="67" height="67">
-                                    </div>
-
-                                    <div class="counter-info-para">
-                                        <h3>
-                                            <span class="counter" data-target="250">0</span><span>K+</span>
-                                        </h3>
-                                        <h3>Over 2 million active trips</h3>
-                                        <p>stays with flexible cancelation make it easy to re-book if your plans change
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div class="counter-info-box">
-                                    <div class="counter-info-icon">
-                                        <img src="assets/images/home/active-trip.svg" width="67" height="67">
-                                    </div>
-
-                                    <div class="counter-info-para">
-                                        <h3>
-                                            <span class="counter" data-target="180">0</span><span>K+</span>
-                                        </h3>
-                                        <h3>Over 2 million active trips</h3>
-                                        <p>stays with flexible cancelation make it easy to re-book if your plans change
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                  </div>
+                  <div class="home-banner-nav">
+                    <div class="nav-item active" data-slide="0">
+                      <!-- <img src="assets/images/home/home-banner-1.jpg" alt="" class="img-fluid"> -->
+                      <span class="number-count">01</span>
+                      <span>Popular Destinations</span>
                     </div>
-                </div>
-
-
-            </section>
-
-            <section id="popular-destinations">
-                <div class="popular-destination-heading">
-                    <p>Where do you want to go</p>
-                    <h2>Popular Destinations</h2>
-
-                    <div class="popular-arrows">
-                        <div class="arrow prev active">
-                            <img src="./assets/images/slider-arrow.svg" width="34" height="34">
-                        </div>
-
-                        <div class="arrow next">
-                            <img src="./assets/images/slider-arrow.svg" width="34" height="34">
-                        </div>
+                    <div class="nav-item" data-slide="1">
+                      <!-- <img src="assets/images/home/home-banner-2.jpg" alt="" class="img-fluid"> -->
+                      <span class="number-count">02</span>
+                      <span>Holiday Packages</span>
                     </div>
-                </div>
-                <div class="popular-destinations">
-
-                    <div class="swiper popular-destinations-slider">
-
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <div class="popular-destination-box zoom-hover">
-                                    <picture>
-                                        <source srcset="./assets/images/home/pryd-land.webp" type="image/webp">
-                                        <source srcset="./assets/images/home/pryd-land.png" type="image/png">
-                                        <img src="./assets/images/home/pryd-land.png" alt="" class="img-fluid">
-                                    </picture>
-
-                                    <div class="popular-location">
-                                        <h2>Pryde land</h2>
-                                        <p><img src="./assets/images/nigeria-flag.svg" alt="" class="img-fluid"
-                                                width="22" height="22">Abuja,Nigeria</p>
-                                        <span>230 wants to travel here</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="popular-destination-box zoom-hover">
-                                    <picture>
-                                        <source srcset="./assets/images/home/taj-mahal.webp" type="image/webp">
-                                        <source srcset="./assets/images/home/taj-mahal.png" type="image/png">
-                                        <img src="./assets/images/home/taj-mahal.png" alt="" class="img-fluid">
-                                    </picture>
-                                    <div class="popular-location">
-                                        <h2>Taj Mahal</h2>
-                                        <p><img src="./assets/images/india-flag.svg" alt="" class="img-fluid" width="22"
-                                                height="22">Uttar Pradesh, India</p>
-                                        <span>230 wants to travel here</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="popular-destination-box zoom-hover">
-                                    <picture>
-                                        <source srcset="./assets/images/home/pryd-land.webp" type="image/webp">
-                                        <source srcset="./assets/images/home/pryd-land.png" type="image/png">
-                                        <img src="./assets/images/home/pryd-land.png" alt="" class="img-fluid">
-                                    </picture>
-
-                                    <div class="popular-location">
-                                        <h2>Pryde land</h2>
-                                        <p><img src="./assets/images/nigeria-flag.svg" alt="" class="img-fluid"
-                                                width="22" height="22">Abuja,Nigeria</p>
-                                        <span>230 wants to travel here</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="popular-destination-box zoom-hover">
-                                    <picture>
-                                        <source srcset="./assets/images/home/taj-mahal.webp" type="image/webp">
-                                        <source srcset="./assets/images/home/taj-mahal.png" type="image/png">
-                                        <img src="./assets/images/home/taj-mahal.png" alt="" class="img-fluid">
-                                    </picture>
-                                    <div class="popular-location">
-                                        <h2>Taj Mahal</h2>
-                                        <p><img src="./assets/images/india-flag.svg" alt="" class="img-fluid" width="22"
-                                                height="22">Uttar Pradesh, India</p>
-                                        <span>230 wants to travel here</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="popular-destination-box zoom-hover">
-                                    <picture>
-                                        <source srcset="./assets/images/home/pryd-land.webp" type="image/webp">
-                                        <source srcset="./assets/images/home/pryd-land.png" type="image/png">
-                                        <img src="./assets/images/home/pryd-land.png" alt="" class="img-fluid">
-                                    </picture>
-
-                                    <div class="popular-location">
-                                        <h2>Pryde land</h2>
-                                        <p><img src="./assets/images/nigeria-flag.svg" alt="" class="img-fluid"
-                                                width="22" height="22">Abuja,Nigeria</p>
-                                        <span>230 wants to travel here</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="popular-destination-box zoom-hover">
-                                    <picture>
-                                        <source srcset="./assets/images/home/taj-mahal.webp" type="image/webp">
-                                        <source srcset="./assets/images/home/taj-mahal.png" type="image/png">
-                                        <img src="./assets/images/home/taj-mahal.png" alt="" class="img-fluid">
-                                    </picture>
-                                    <div class="popular-location">
-                                        <h2>Taj Mahal</h2>
-                                        <p><img src="./assets/images/india-flag.svg" alt="" class="img-fluid" width="22"
-                                                height="22">Uttar Pradesh, India</p>
-                                        <span>230 wants to travel here</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="nav-item" data-slide="2">
+                      <!-- <img src="assets/images/home/home-banner-3.jpg" alt="" class="img-fluid"> -->
+                      <span class="number-count">03</span>
+                      <span>Travel Experiences</span>
                     </div>
-
-                </div>
-            </section>
-            <section class="travel-services">
-
-                <div class="container">
-
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="travel-services-heading">
-                                <p>
-                                    Where do you want to go
-                                </p>
-                                <h2>Lets us worry about your plans, <br>
-                                    Just get packed</h2>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="service-button">
-                                <a class="main-btn" href="#" role="button">
-
-                                    <span class="btn-text">Take a Trip</span>
-
-                                    <img src="./assets/images/plane-yellow.gif" class="plane-icon" alt="plane">
-
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-lg-5 mt-5 col-left zoom-hover">
-                            <picture>
-                                <source srcset="./assets/images/home/lets-us-thumb.webp" type="image/webp">
-                                <source srcset="./assets/images/home/lets-us-thumb.png" type="image/png">
-                                <img src="./assets/images/home/lets-us-thumb.png" alt="" class="img-fluid">
-                            </picture>
-                        </div>
-
-                        <div class="col-lg-7 mt-5 col-right">
-                            <div class="trip-package">
-                                <img src="./assets/images/car.svg" class="" alt="Car" width="45" height="45">
-                                <h2>Rent a car</h2>
-                                <p>Lorem ipsum dolor sit amet consecteur fin dren</p>
-                                <a href="">Lets Goimg
-                                    <img src="./assets/images/slider-arrow.svg" alt="" width="22" height="22">
-                                </a>
-                            </div>
-                            <div class="trip-package">
-                                <img src="./assets/images/bed.svg" class="" alt="Hotel" width="45" height="45">
-                                <h2>Get a hotel</h2>
-                                <p>Lorem ipsum dolor sit amet consecteur fin dren</p>
-                                <a href="">Lets Goimg
-                                    <img src="./assets/images/slider-arrow.svg" alt="" width="22" height="22">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </section>
-            <section id="trip-gallery">
-                <div class="container">
-                    <div class="trip-gallery-content">
-                        <div class="trip-gallery-heading text-center">
-                            <p>Trip Gallery</p>
-                            <h2>Completed Journeys</h2>
-                        </div>
-                        <div class="gallery-bg">
-                            <div class="row mt-5 gy-4">
-                                <div class="col-lg-4">
-                                    <div class="gallery-image zoom-hover">
-                                        <picture>
-                                            <source srcset="./assets/images/home/eiffel-tower.webp" type="image/webp">
-                                            <source srcset="./assets/images/home/eiffel-tower.png" type="image/png">
-                                            <img src="./assets/images/home/eiffel-tower.png" alt="" class="img-fluid">
-                                        </picture>
-                                        <div class="gallery-sub-content">
-                                            <h2>Eiffel Tower</h2>
-                                            <p>Paris, 24 Trips</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="gallery-image zoom-hover">
-                                        <picture>
-                                            <source srcset="./assets/images/home/pryde-mountains.webp"
-                                                type="image/webp">
-                                            <source srcset="./assets/images/home/pryde-mountains.png" type="image/png">
-                                            <img src="./assets/images/home/pryde-mountains.png" alt=""
-                                                class="img-fluid">
-                                        </picture>
-                                        <div class="gallery-sub-content">
-                                            <h2>Pryde mountains</h2>
-                                            <p>Prydelands, 100 Trips</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="gallery-image zoom-hover">
-                                        <picture>
-                                            <source srcset="./assets/images/home/lao-lading-lsland.webp"
-                                                type="image/webp">
-                                            <source srcset="./assets/images/home/lao-lading-lsland.png"
-                                                type="image/png">
-                                            <img src="./assets/images/home/lao-lading-lsland.png" alt=""
-                                                class="img-fluid">
-                                        </picture>
-                                        <div class="gallery-sub-content">
-                                            <h2>Lao Lading Island</h2>
-                                            <p>Krabal, 12 Trips</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="gallery-image zoom-hover">
-                                        <picture>
-                                            <source srcset="./assets/images/home/ton-kwen-temple.webp"
-                                                type="image/webp">
-                                            <source srcset="./assets/images/home/ton-kwen-temple.png" type="image/png">
-                                            <img src="./assets/images/home/ton-kwen-temple.png" alt=""
-                                                class="img-fluid">
-                                        </picture>
-                                        <div class="gallery-sub-content">
-                                            <h2>Ton Kwen Temple</h2>
-                                            <p>Thailand, 20 Trips</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="gallery-image zoom-hover">
-                                        <picture>
-                                            <source srcset="./assets/images/home/taaj-mahal.webp" type="image/webp">
-                                            <source srcset="./assets/images/home/taaj-mahal.png" type="image/png">
-                                            <img src="./assets/images/home/taaj-mahal.png" alt="" class="img-fluid">
-                                        </picture>
-                                        <div class="gallery-sub-content">
-                                            <h2>Taj Mahal</h2>
-                                            <p>Thailand, 50 Trips</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 text-center journey">
-                                    <a class="main-btn" href="#" role="button">
-
-                                        <span class="btn-text">See all journeys</span>
-
-                                        <img src="./assets/images/plane-yellow.gif" class="plane-icon" alt="plane">
-
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-            <section id="testimonial">
-
-                <div class="testimonial-heading">
-                    <p>Testimonials</p>
-                    <h2>Don't take our word for it</h2>
-                </div>
-
-                <!-- TEXT -->
-
-                <div class="swiper testimonial-text">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <p>
-                                "I had the most incredible vacation experience thanks to XYZ Travel Agency!"
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "The team handled everything professionally and perfectly."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "Great travel planning and excellent support."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "Best travel experience ever."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "Highly recommended agency."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <p>
-                                "I had the most incredible vacation experience thanks to XYZ Travel Agency!"
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "The team handled everything professionally and perfectly."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "Great travel planning and excellent support."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "Best travel experience ever."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <p>
-                                "Highly recommended agency."
-                            </p>
-                            <div class="stars">★★★★★</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- PROFILES -->
-
-                <div class="swiper testimonial-profiles">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=1">
-                            <p>Peler</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=2">
-                            <p>Victor</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=3">
-                            <p>Osinachi</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=4">
-                            <p>Nora Acholo</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=5">
-                            <p>Klaus</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=6">
-                            <p>Bryan</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=1">
-                            <p>Peler</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=2">
-                            <p>Victor</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=3">
-                            <p>Osinachi</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=4">
-                            <p>Nora Acholo</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=5">
-                            <p>Klaus</p>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="https://i.pravatar.cc/80?img=6">
-                            <p>Bryan</p>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-            <section id="ready-to-go">
-                <div class="container">
-                    <div class="ready-to-go-content text-center">
-                        <h2>Ready to go? <br>
-                            Give us a quick call</h2>
-                        <div class="contact-button">
-                            <a class="main-btn" href="#" role="button">
-
-                                <span class="btn-text">Contact us</span>
-
-                                <img src="./assets/images/plane-yellow.gif" class="plane-icon" alt="plane">
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Booking Data Popup  Start -->
-        <div id="bookingPopup" class="popup">
-
-            <div class="popup-box">
-
-                <h3>Trip Summary</h3>
-
-                <div class="trip-summary">
-
-                    <p><strong>Departure:</strong> <span id="p_departure"></span></p>
-
-                    <p><strong>Destination:</strong> <span id="p_destination"></span></p>
-
-                    <p><strong>Travel Date:</strong> <span id="p_travel"></span></p>
-
-                    <p><strong>Return Date:</strong> <span id="p_return"></span></p>
-
-                </div>
-
-
-                <div class="traveler-summary">
-
-                    <p><strong>Men:</strong> <span id="p_men">0</span></p>
-
-                    <p><strong>Women:</strong> <span id="p_women">0</span></p>
-
-                    <p><strong>Children:</strong> <span id="p_children">0</span></p>
-
-                    <p><strong>Total Travelers:</strong> <span id="p_travelers"></span></p>
-
-                </div>
-
-
-                <div class="trip-summary">
-
-                    <p><strong>Total Days:</strong> <span id="p_days"></span></p>
-
-                    <p><strong>Package Amount:</strong> ₹<span id="p_amount"></span></p>
-
-                </div>
-
-
-                <h4>Traveler Details</h4>
-
-                <div id="popupTravelerList" class="traveler-popup-list"></div>
-
-
-                <div class="popup-buttons">
-
-                    <button class="cancel-btn" onclick="closePopup()">
-                        Cancel
+                  </div>
+                  <!-- Custom Arrows -->
+                  <div class="home-banner-arrows">
+                    <button
+                      class="arrow-btn prev-btn banner-prev"
+                      aria-label="Previous slide"
+                    >
+                      <img
+                        src="assets/images/slider-arrow.svg"
+                        alt="Previous"
+                      />
                     </button>
 
-                    <button class="confirm-btn" onclick="confirmTrip()">
-                        Confirm
-                    </button>
+                    <div class="slide-count">
+                      <span class="current">1</span>/<span class="total"
+                        >3</span
+                      >
+                    </div>
 
+                    <button
+                      class="arrow-btn next-btn banner-next"
+                      aria-label="Next slide"
+                    >
+                      <img src="assets/images/slider-arrow.svg" alt="Next" />
+                    </button>
+                  </div>
+                  <!-- Mobile Pagination Dots -->
+                  <!-- <div class="swiper-pagination home-banner-dots"></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Home Banner Section End  -->
+        <div class="booking-bg">
+          <section class="booking-section">
+            <div class="container">
+              <form id="bookingForm" data-aos="fade-up">
+                <div class="booking-box">
+                  <!-- Departure City -->
+                  <div class="booking-field icon-field">
+                    <label for="departure">
+                      <img src="./assets/images/city.svg" width="20" alt="" />
+                      Departure City
+                    </label>
+
+                    <div class="input-icon">
+                      <input
+                        type="text"
+                        id="departure"
+                        name="departure"
+                        placeholder="From where are you travelling?"
+                        list="cityList"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Destination -->
+                  <div class="booking-field icon-field">
+                    <label for="destination">
+                      <img
+                        src="./assets/images/location.svg"
+                        width="20"
+                        alt=""
+                      />
+                      Destination
+                    </label>
+
+                    <div class="input-icon">
+                      <input
+                        type="text"
+                        id="destination"
+                        name="destination"
+                        placeholder="Where are you going?"
+                        list="cityList"
+                        autocomplete="off"
+                        oninput="updateTransportOptions()"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- City Suggestions -->
+                  <datalist id="cityList">
+                    <option value="Mumbai"></option>
+                    <option value="Goa"></option>
+                    <option value="Delhi"></option>
+                    <option value="Bali"></option>
+                    <option value="Dubai"></option>
+                    <option value="Thailand"></option>
+                    <option value="Maldives"></option>
+                    <option value="Singapore"></option>
+                    <option value="Paris"></option>
+                    <option value="London"></option>
+                  </datalist>
+
+                  <!-- Travel Date -->
+                  <div class="booking-field icon-field">
+                    <label for="travelDate">
+                      <img
+                        src="./assets/images/travel-date.svg"
+                        width="20"
+                        alt=""
+                      />
+                      Travel Date
+                    </label>
+
+                    <div class="input-icon">
+                      <input
+                        type="date"
+                        id="travelDate"
+                        name="travelDate"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Return Date -->
+                  <div class="booking-field icon-field">
+                    <label for="returnDate">
+                      <img
+                        src="./assets/images/return-date.svg"
+                        width="20"
+                        alt=""
+                      />
+                      Return Date
+                    </label>
+
+                    <div class="input-icon">
+                      <input
+                        type="date"
+                        id="returnDate"
+                        name="returnDate"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Travelers -->
+                  <div class="booking-field traveler-field">
+                    <label>
+                      <img
+                        src="./assets/images/traveler.svg"
+                        width="20"
+                        alt=""
+                      />
+                      Travelers
+                    </label>
+
+                    <div class="traveler-counter">
+                      <button type="button" id="minusTraveler">−</button>
+
+                      <input
+                        type="text"
+                        id="travelerCount"
+                        value="0"
+                        readonly
+                      />
+
+                      <button type="button" id="addTraveler">+</button>
+                    </div>
+                  </div>
+
+                  <!-- Package -->
+                  <div class="booking-field icon-field">
+                    <label for="package">
+                      <img src="./assets/images/budget.svg" width="20" alt="" />
+                      Budget / Package
+                    </label>
+
+                    <div class="input-icon package-wrapper">
+                      <select
+                        id="package"
+                        name="package"
+                        required
+                        onchange="showPackageInfo()"
+                      >
+                        <option value="">Select Package</option>
+
+                        <option value="budget" data-price="2000">
+                          Budget Package
+                        </option>
+
+                        <option value="standard" data-price="3500">
+                          Standard Package
+                        </option>
+
+                        <option value="luxury" data-price="6000">
+                          Luxury Package
+                        </option>
+
+                        <option value="premium" data-price="9000">
+                          Premium Package
+                        </option>
+                      </select>
+
+                      <span
+                        class="package-info-icon"
+                        onclick="showPackageInfo()"
+                        >ℹ️</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Search Button -->
+                  <div class="booking-btn">
+                    <button class="main-btn" id="searchTrip" type="button">
+                      <span class="btn-text">Search Trip</span>
+
+                      <img
+                        src="./assets/images/plane-yellow.gif"
+                        class="plane-icon"
+                        alt="plane"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Traveler Details Section -->
+              <div
+                class="traveler-details-wrapper"
+                id="travelerDetailsWrapper"
+                style="display: none"
+              >
+                <div class="traveler-header">
+                  <h4>Traveler Details</h4>
                 </div>
 
+                <div id="travelerCards"></div>
+                <button
+                  type="button"
+                  class="add-traveler-btn"
+                  onclick="triggerAddTraveler()"
+                >
+                  + Add Traveler
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="marquee-section">
+            <div class="blue-strip">
+              <div class="marquee">
+                <div class="marquee-content">
+                  <span>explore</span>
+                  <span>adventure</span>
+                  <span>luxury</span>
+                  <span>enjoy</span>
+                  <span>explore</span>
+
+                  <!-- duplicate for smooth loop -->
+                  <span>explore</span>
+                  <span>adventure</span>
+                  <span>luxury</span>
+                  <span>enjoy</span>
+                  <span>explore</span>
+                </div>
+              </div>
+            </div>
+            <div class="yellow-strip"></div>
+          </section>
+        </div>
+
+        <section id="counter-info">
+          <div class="container">
+            <div class="counter-info-content" data-aos="fade-up">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="counter-info-box">
+                    <div class="counter-info-icon">
+                      <img
+                        src="assets/images/home/happy-travelers.svg"
+                        width="67"
+                        height="67"
+                      />
+                    </div>
+
+                    <div class="counter-info-para">
+                      <h3>
+                        <span class="counter" data-target="35">0</span
+                        ><span>K+</span>
+                      </h3>
+                      <h3>Happy Travelers</h3>
+                      <p>
+                        Thousands of satisfied customers who explored amazing
+                        destinations with us.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="counter-info-box">
+                    <div class="counter-info-icon">
+                      <img
+                        src="assets/images/home/trip-completed.svg"
+                        width="67"
+                        height="67"
+                      />
+                    </div>
+
+                    <div class="counter-info-para">
+                      <h3>
+                        <span class="counter" data-target="12">0</span
+                        ><span>K+</span>
+                      </h3>
+                      <h3>Trips Completed</h3>
+                      <p>
+                        Successfully planned domestic and international tours
+                        for our clients.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="counter-info-box">
+                    <div class="counter-info-icon">
+                      <img
+                        src="assets/images/home/destination-coverd.svg"
+                        width="67"
+                        height="67"
+                      />
+                    </div>
+
+                    <div class="counter-info-para">
+                      <h3>
+                        <span class="counter" data-target="120">0</span
+                        ><span>+</span>
+                      </h3>
+                      <h3>Destinations Covered</h3>
+                      <p>
+                        Explore top domestic and international destinations with
+                        curated packages.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="counter-info-box">
+                    <div class="counter-info-icon">
+                      <img
+                        src="assets/images/home/tour-packages.svg"
+                        width="67"
+                        height="67"
+                      />
+                    </div>
+
+                    <div class="counter-info-para">
+                      <h3>
+                        <span class="counter" data-target="80">0</span
+                        ><span>+</span>
+                      </h3>
+                      <h3>Tour Packages</h3>
+                      <p>
+                        Wide range of budget, luxury and customized travel
+                        packages.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="popular-destinations">
+          <div class="popular-destination-heading">
+            <p>Where do you want to go</p>
+            <h2>Popular Destinations</h2>
+
+            <div class="popular-arrows">
+              <div class="arrow prev active">
+                <img
+                  src="./assets/images/slider-arrow.svg"
+                  width="34"
+                  height="34"
+                />
+              </div>
+
+              <div class="arrow next">
+                <img
+                  src="./assets/images/slider-arrow.svg"
+                  width="34"
+                  height="34"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="popular-destinations">
+            <div class="swiper popular-destinations-slider">
+              <div class="swiper-wrapper">
+                <!-- GOA -->
+
+                <div class="swiper-slide">
+                  <a
+                    href="packages.html?destination=goa"
+                    class="popular-destination-box zoom-hover"
+                  >
+                    <img src="./assets/images/home/goa.jpg" class="img-fluid" />
+
+                    <div class="popular-location">
+                      <h2>Goa</h2>
+                      <p>🇮🇳 India</p>
+                      <span class="price">Starting from ₹12,999</span>
+                      <span class="travelers">350 people exploring</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- MANALI -->
+
+                <div class="swiper-slide">
+                  <a
+                    href="packages.html?destination=manali"
+                    class="popular-destination-box zoom-hover"
+                  >
+                    <img
+                      src="./assets/images/home/manali.jpg"
+                      class="img-fluid"
+                    />
+
+                    <div class="popular-location">
+                      <h2>Manali</h2>
+                      <p>🇮🇳 Himachal Pradesh</p>
+                      <span class="price">Starting from ₹10,499</span>
+                      <span class="travelers">280 people exploring</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- KASHMIR -->
+
+                <div class="swiper-slide">
+                  <a
+                    href="packages.html?destination=kashmir"
+                    class="popular-destination-box zoom-hover"
+                  >
+                    <img
+                      src="./assets/images/home/kashmir.jpg"
+                      class="img-fluid"
+                    />
+
+                    <div class="popular-location">
+                      <h2>Kashmir</h2>
+                      <p>🇮🇳 Jammu & Kashmir</p>
+                      <span class="price">Starting from ₹14,999</span>
+                      <span class="travelers">420 people exploring</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- DUBAI -->
+
+                <div class="swiper-slide">
+                  <a
+                    href="packages.html?destination=dubai"
+                    class="popular-destination-box zoom-hover"
+                  >
+                    <img
+                      src="./assets/images/home/dubai.jpg"
+                      class="img-fluid"
+                    />
+
+                    <div class="popular-location">
+                      <h2>Dubai</h2>
+                      <p>🇦🇪 UAE</p>
+                      <span class="price">Starting from ₹39,999</span>
+                      <span class="travelers">510 people exploring</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- BALI -->
+
+                <div class="swiper-slide">
+                  <a
+                    href="packages.html?destination=bali"
+                    class="popular-destination-box zoom-hover"
+                  >
+                    <img
+                      src="./assets/images/home/bali.jpg"
+                      class="img-fluid"
+                    />
+
+                    <div class="popular-location">
+                      <h2>Bali</h2>
+                      <p>🇮🇩 Indonesia</p>
+                      <span class="price">Starting from ₹44,999</span>
+                      <span class="travelers">390 people exploring</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- MALDIVES -->
+
+                <div class="swiper-slide">
+                  <a
+                    href="packages.html?destination=maldives"
+                    class="popular-destination-box zoom-hover"
+                  >
+                    <img
+                      src="./assets/images/home/maldives.jpg"
+                      class="img-fluid"
+                    />
+
+                    <div class="popular-location">
+                      <h2>Maldives</h2>
+                      <p>🇲🇻 Indian Ocean</p>
+                      <span class="price">Starting from ₹59,999</span>
+                      <span class="travelers">460 people exploring</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="travel-services">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="travel-services-heading">
+                  <p>Plan your perfect journey</p>
+                  <h2>
+                    We handle every detail of your trip,<br />
+                    so you can simply enjoy the adventure
+                  </h2>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="service-button">
+                  <a class="main-btn" href="#bookingForm" role="button">
+                    <span class="btn-text">Take a Trip</span>
+
+                    <img
+                      src="./assets/images/plane-yellow.gif"
+                      class="plane-icon"
+                      alt="plane"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
 
-        </div>
-        <!-- Booking Data Popup  End -->
-        <!-- packagePopup End -->
-        <div id="packagePopup" class="package-popup">
+            <div class="row align-items-center">
+              <!-- Image -->
+              <div class="col-lg-5 mt-5 col-left zoom-hover">
+                <picture>
+                  <source
+                    srcset="./assets/images/home/travel-planning.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/images/home/travel-planning.png"
+                    type="image/png"
+                  />
 
-            <div class="package-popup-box">
+                  <img
+                    src="./assets/images/home/travel-planning.png"
+                    class="img-fluid travel-thumb"
+                    alt="Travel Planning"
+                  />
+                </picture>
+              </div>
 
-                <span class="package-close" onclick="closePackagePopup()">✖</span>
+              <!-- Services -->
+              <div class="col-lg-7 mt-5 col-right">
+                <!-- Car Rental -->
+                <div class="trip-package">
+                  <img
+                    src="./assets/images/car.svg"
+                    alt="Car Rental"
+                    width="45"
+                    height="45"
+                  />
 
-                <h3 id="packageTitle"></h3>
+                  <h2>Rent a Car</h2>
 
-                <p class="package-price" id="packagePrice"></p>
+                  <p>
+                    Travel comfortably with our reliable car rental services.
+                    Choose from economy, SUV, or luxury vehicles for your
+                    journey.
+                  </p>
 
-                <ul id="packageFeatures"></ul>
+                  <a href="car-rental.html">
+                    Explore Options
+                    <img
+                      src="./assets/images/slider-arrow.svg"
+                      alt=""
+                      width="22"
+                      height="22"
+                    />
+                  </a>
+                </div>
 
+                <!-- Hotel Booking -->
+                <div class="trip-package">
+                  <img
+                    src="./assets/images/bed.svg"
+                    alt="Hotel Booking"
+                    width="45"
+                    height="45"
+                  />
+
+                  <h2>Book Your Hotel</h2>
+
+                  <p>
+                    Find the perfect stay with our curated hotel selections,
+                    from budget-friendly accommodations to premium luxury
+                    resorts.
+                  </p>
+
+                  <a href="hotel-booking.html">
+                    Find Hotels
+                    <img
+                      src="./assets/images/slider-arrow.svg"
+                      alt=""
+                      width="22"
+                      height="22"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="trip-gallery">
+          <div class="container">
+            <div class="trip-gallery-content">
+              <div class="trip-gallery-heading text-center">
+                <p>Travel Memories</p>
+                <h2>Completed Journeys</h2>
+              </div>
+
+              <div class="gallery-bg">
+                <div class="row mt-5 gy-4">
+                  <!-- SANTORINI -->
+
+                  <div class="col-lg-4">
+                    <a
+                      href="./assets/images/home/santorini.png"
+                      class="glightbox"
+                    >
+                      <div class="gallery-image zoom-hover">
+                        <picture>
+                          <source
+                            srcset="./assets/images/home/santorini.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="./assets/images/home/santorini.png"
+                            type="image/png"
+                          />
+                          <img
+                            src="./assets/images/home/santorini.png"
+                            class="img-fluid"
+                            alt="Santorini Greece"
+                          />
+                        </picture>
+
+                        <div class="gallery-sub-content">
+                          <h2>Santorini Island</h2>
+                          <p>Santorini, Greece • 32 Romantic Trips</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- BALI -->
+
+                  <div class="col-lg-8">
+                    <a
+                      href="./assets/images/home/bali-island.png"
+                      class="glightbox"
+                    >
+                      <div class="gallery-image zoom-hover">
+                        <picture>
+                          <source
+                            srcset="./assets/images/home/bali-island.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="./assets/images/home/bali-island.png"
+                            type="image/png"
+                          />
+                          <img
+                            src="./assets/images/home/bali-island.png"
+                            class="img-fluid"
+                            alt="Bali Indonesia"
+                          />
+                        </picture>
+
+                        <div class="gallery-sub-content">
+                          <h2>Bali Island</h2>
+                          <p>Bali, Indonesia • 40 Beach Tours</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- SWISS ALPS -->
+
+                  <div class="col-lg-4">
+                    <a
+                      href="./assets/images/home/swiss-alps.png"
+                      class="glightbox"
+                    >
+                      <div class="gallery-image zoom-hover">
+                        <picture>
+                          <source
+                            srcset="./assets/images/home/swiss-alps.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="./assets/images/home/swiss-alps.png"
+                            type="image/png"
+                          />
+                          <img
+                            src="./assets/images/home/swiss-alps.png"
+                            class="img-fluid"
+                            alt="Swiss Alps"
+                          />
+                        </picture>
+
+                        <div class="gallery-sub-content">
+                          <h2>Swiss Alps</h2>
+                          <p>Switzerland • 28 Mountain Adventures</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- DUBAI DESERT -->
+
+                  <div class="col-lg-4">
+                    <a
+                      href="./assets/images/home/dubai-desert.png"
+                      class="glightbox"
+                    >
+                      <div class="gallery-image zoom-hover">
+                        <picture>
+                          <source
+                            srcset="./assets/images/home/dubai-desert.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="./assets/images/home/dubai-desert.png"
+                            type="image/png"
+                          />
+                          <img
+                            src="./assets/images/home/dubai-desert.png"
+                            class="img-fluid"
+                            alt="Dubai Desert Safari"
+                          />
+                        </picture>
+
+                        <div class="gallery-sub-content">
+                          <h2>Dubai Desert</h2>
+                          <p>Dubai, UAE • 22 Desert Safaris</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- MALDIVES -->
+
+                  <div class="col-lg-4">
+                    <a
+                      href="./assets/images/home/maldives.png"
+                      class="glightbox"
+                    >
+                      <div class="gallery-image zoom-hover">
+                        <picture>
+                          <source
+                            srcset="./assets/images/home/maldives.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="./assets/images/home/maldives.png"
+                            type="image/png"
+                          />
+                          <img
+                            src="./assets/images/home/maldives.png"
+                            class="img-fluid"
+                            alt="Maldives Island"
+                          />
+                        </picture>
+
+                        <div class="gallery-sub-content">
+                          <h2>Maldives</h2>
+                          <p>Maldives • 35 Luxury Island Trips</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- BUTTON -->
+
+                  <div class="col-lg-12 text-center journey">
+                    <a class="main-btn" href="gallery.html">
+                      <span class="btn-text">See All Journeys</span>
+
+                      <img
+                        src="./assets/images/plane-yellow.gif"
+                        class="plane-icon"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonial">
+          <div class="container">
+            <div class="testimonial-heading text-center">
+              <p>Testimonials</p>
+
+              <h2>What Our Travelers Say</h2>
+
+              <div class="testimonial-rating">
+                ⭐ 4.9 / 5 Rating • 1200+ Happy Travelers
+              </div>
             </div>
 
-        </div>
-        <!-- packagePopup  End -->
-        <!-- booking thank youPopup  Start -->
-        <div id="thankPopup" class="popup">
+            <!-- TEXT REVIEWS -->
 
-            <div class="popup-box">
+            <div class="swiper testimonial-text">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="quote-icon">❝</div>
 
-                <h3>🎉 Thank You!</h3>
+                  <p>
+                    "Our Goa honeymoon trip was beautifully planned. The hotel,
+                    sightseeing and private cab service were all excellent."
+                  </p>
 
-                <p>Your trip request has been submitted.</p>
+                  <div class="stars">★★★★★</div>
+                </div>
 
-                <button onclick="closeThank()">Close</button>
+                <div class="swiper-slide">
+                  <div class="quote-icon">❝</div>
 
+                  <p>
+                    "We booked a Manali snow trip with Sky Route Travel and
+                    everything was perfectly arranged from start to finish."
+                  </p>
+
+                  <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="quote-icon">❝</div>
+
+                  <p>
+                    "Our Dubai vacation was unforgettable. The desert safari and
+                    Burj Khalifa visit were highlights of the trip."
+                  </p>
+
+                  <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="quote-icon">❝</div>
+
+                  <p>
+                    "I travelled to Bali with my family and the entire
+                    experience was amazing. Great support and smooth booking."
+                  </p>
+
+                  <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="quote-icon">❝</div>
+
+                  <p>
+                    "The Thailand tour package was perfectly organized. Flights,
+                    hotel stay and local tours were fantastic."
+                  </p>
+
+                  <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="quote-icon">❝</div>
+
+                  <p>
+                    "Our Kashmir trip was magical. Snow mountains, houseboat
+                    stay and guided tour made it truly memorable."
+                  </p>
+
+                  <div class="stars">★★★★★</div>
+                </div>
+              </div>
             </div>
 
+            <!-- PROFILE SLIDER -->
+
+            <div class="swiper testimonial-profiles">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=12" />
+                  <p>Rahul Sharma</p>
+                  <span class="trip-tag">Goa Honeymoon</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=24" />
+                  <p>Priya Mehta</p>
+                  <span class="trip-tag">Manali Snow Trip</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=32" />
+                  <p>David Wilson</p>
+                  <span class="trip-tag">Dubai Vacation</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=45" />
+                  <p>Anjali Verma</p>
+                  <span class="trip-tag">Bali Family Trip</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=56" />
+                  <p>Michael Brown</p>
+                  <span class="trip-tag">Thailand Tour</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=68" />
+                  <p>Neha Kapoor</p>
+                  <span class="trip-tag">Kashmir Trip</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=8" />
+                  <p>Amit Patel</p>
+                  <span class="trip-tag">Singapore Tour</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=15" />
+                  <p>Sara Johnson</p>
+                  <span class="trip-tag">Maldives Honeymoon</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=20" />
+                  <p>Karan Malhotra</p>
+                  <span class="trip-tag">Paris Vacation</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=30" />
+                  <p>Emily Watson</p>
+                  <span class="trip-tag">London Tour</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=40" />
+                  <p>Rohit Singh</p>
+                  <span class="trip-tag">Ladakh Adventure</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="https://i.pravatar.cc/80?img=50" />
+                  <p>Jessica Miller</p>
+                  <span class="trip-tag">Vietnam Trip</span>
+                  <span class="verified">✔ Verified Traveler</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="ready-to-go">
+          <div class="container">
+            <div class="ready-to-go-content text-center">
+              <h2>
+                Ready to go? <br />
+                Give us a quick call
+              </h2>
+              <p class="cta-subtitle">
+                Our travel experts are ready to help you plan your perfect
+                journey.
+              </p>
+              <div class="contact-button">
+                <a class="main-btn" href="contact.html" role="button">
+                  <span class="btn-text">Contact us</span>
+
+                  <img
+                    src="./assets/images/plane-yellow.gif"
+                    class="plane-icon"
+                    alt="plane"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Booking Data Popup  Start -->
+      <div id="bookingPopup" class="popup">
+        <div class="popup-box">
+          <h3>Trip Summary</h3>
+
+          <div class="trip-summary">
+            <p><strong>Departure:</strong> <span id="p_departure"></span></p>
+
+            <p>
+              <strong>Destination:</strong> <span id="p_destination"></span>
+            </p>
+
+            <p><strong>Travel Date:</strong> <span id="p_travel"></span></p>
+
+            <p><strong>Return Date:</strong> <span id="p_return"></span></p>
+          </div>
+
+          <div class="traveler-summary">
+            <p><strong>Men:</strong> <span id="p_men">0</span></p>
+
+            <p><strong>Women:</strong> <span id="p_women">0</span></p>
+
+            <p><strong>Children:</strong> <span id="p_children">0</span></p>
+
+            <p>
+              <strong>Total Travelers:</strong> <span id="p_travelers"></span>
+            </p>
+          </div>
+
+          <div class="trip-summary">
+            <p><strong>Total Days:</strong> <span id="p_days"></span></p>
+
+            <p><strong>Package Amount:</strong> ₹<span id="p_amount"></span></p>
+          </div>
+
+          <h4>Traveler Details</h4>
+
+          <div id="popupTravelerList" class="traveler-popup-list"></div>
+
+          <div class="popup-buttons">
+            <button class="cancel-btn" onclick="closePopup()">Cancel</button>
+
+            <button class="confirm-btn" onclick="confirmTrip()">Confirm</button>
+          </div>
         </div>
-        <!-- booking thank youPopup  End -->
+      </div>
+      <!-- Booking Data Popup  End -->
+      <!-- packagePopup End -->
+      <div id="packagePopup" class="package-popup">
+        <div class="package-popup-box">
+          <span class="package-close" onclick="closePackagePopup()">✖</span>
 
+          <h3 id="packageTitle"></h3>
 
+          <p class="package-price" id="packagePrice"></p>
 
+          <ul id="packageFeatures"></ul>
+        </div>
+      </div>
+      <!-- packagePopup  End -->
+      <!-- booking thank youPopup  Start -->
+      <div id="thankPopup" class="popup">
+        <div class="popup-box">
+          <h3>🎉 Thank You!</h3>
 
+          <p>Your trip request has been submitted.</p>
+
+          <button onclick="closeThank()">Close</button>
+        </div>
+      </div>
+      <!-- booking thank youPopup  End -->
     </main>
     <!-- Footer Start -->
     <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo + description -->
+          <div class="footer-logo">
+            <img
+              src="assets/images/logo-black.svg"
+              alt="logo"
+              width="154"
+              height="42"
+            />
 
-        <div class="container">
-
-            <div class="footer-top">
-
-                <!-- Logo + description -->
-                <div class="footer-logo">
-
-                    <img src="assets/images/logo-black.svg" alt="logo" width="154" height="42">
-
-                    <!-- <p class="footer-desc">
+            <!-- <p class="footer-desc">
 Discover the world's most amazing places with SkyRoute. 
 We help you plan unforgettable journeys.
 </p> -->
+          </div>
 
-                </div>
+          <!-- Menu -->
+          <ul class="footer-menu">
+            <li><a href="#popular-destinations">Places</a></li>
+            <li><a href="#travel-services">About</a></li>
+            <li><a href="#trip-gallery">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
 
+          <!-- Button -->
+          <div class="footer-btn">
+            <a
+              class="nav-link footer btn main-btn"
+              href="#bookingForm"
+              role="button"
+            >
+              <span class="btn-text">Take a Trip</span>
 
-                <!-- Menu -->
-                <ul class="footer-menu">
-
-                    <li><a href="#">Places</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-
-                </ul>
-
-
-                <!-- Button -->
-                <div class="footer-btn">
-
-                    <a class="nav-link footer btn main-btn" href="#" role="button">
-
-                        <span class="btn-text">Take a Trip</span>
-
-                        <img src="./assets/images/plane-yellow.gif" class="plane-icon" alt="plane">
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <hr>
-
-
-            <div class="footer-bottom">
-
-                <p>Copyright © SkyRoute 2026</p>
-
-                <div class="footer-links">
-
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms</a>
-
-                </div>
-
-
-                <div class="footer-social">
-
-                    <a href="#"><img src="./assets/images/instagram.svg" width="24"></a>
-                    <a href="#"><img src="./assets/images/linkedin.svg" width="24"></a>
-                    <a href="#"><img src="./assets/images/facebook.svg" width="24"></a>
-
-                </div>
-
-            </div>
-
+              <img
+                src="./assets/images/plane-yellow.gif"
+                class="plane-icon"
+                alt="plane"
+              />
+            </a>
+          </div>
         </div>
 
+        <hr />
+
+        <div class="footer-bottom">
+          <p>Copyright © SkyRoute 2026</p>
+
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+          </div>
+
+          <div class="footer-social">
+            <a href="#"
+              ><img src="./assets/images/instagram.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/linkedin.svg" width="24"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/facebook.svg" width="24"
+            /></a>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- Footer End -->
     <!-- Accessibility Start -->
 
     <!-- Back to Top Button -->
     <div id="back-to-top">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-            <defs>
-                <linearGradient id="animated-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#0080A8">
-                        <animate attributeName="stop-color" values="#0080A8;#C13C5F;#0080A8" dur="3s"
-                            repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="50%" stop-color="#4961AC">
-                        <animate attributeName="stop-color" values="#4961AC;#7B429A;#4961AC" dur="3s"
-                            repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="100%" stop-color="#C13C5F">
-                        <animate attributeName="stop-color" values="#C13C5F;#0080A8;#C13C5F" dur="3s"
-                            repeatCount="indefinite" />
-                    </stop>
-                </linearGradient>
-            </defs>
-            <g fill="url(#animated-gradient)">
-                <path d="M16 4 L12 10 H20 L16 4 Z M16 28 V12" stroke="url(#animated-gradient)" stroke-width="2"
-                    fill="none" />
-            </g>
-        </svg>
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+      >
+        <defs>
+          <linearGradient
+            id="animated-gradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop offset="0%" stop-color="#0080A8">
+              <animate
+                attributeName="stop-color"
+                values="#0080A8;#C13C5F;#0080A8"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <stop offset="50%" stop-color="#4961AC">
+              <animate
+                attributeName="stop-color"
+                values="#4961AC;#7B429A;#4961AC"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <stop offset="100%" stop-color="#C13C5F">
+              <animate
+                attributeName="stop-color"
+                values="#C13C5F;#0080A8;#C13C5F"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </stop>
+          </linearGradient>
+        </defs>
+        <g fill="url(#animated-gradient)">
+          <path
+            d="M16 4 L12 10 H20 L16 4 Z M16 28 V12"
+            stroke="url(#animated-gradient)"
+            stroke-width="2"
+            fill="none"
+          />
+        </g>
+      </svg>
     </div>
     <!-- JS Files (defer for performance) -->
     <script src="assets/js/jquery-3.7.1.min.js" defer></script>
@@ -1292,15 +1613,21 @@ We help you plan unforgettable journeys.
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/init.js?v9" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="assets/js/init.js?v9" defer></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
     </script>
-</body>
-
+    <script>
+      const lightbox = GLightbox({
+        selector: ".glightbox",
+      });
+    </script>
+  </body>
 </html>
